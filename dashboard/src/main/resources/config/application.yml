@@ -1,32 +1,32 @@
 spring:
-    profiles:
-        active: dev
-    datasource:
-        driver-class-name: org.postgresql.ds.PGSimpleDataSource
-        url: jdbc:postgresql://localhost:5432/rhino
-        name:
-        username: postgres
-        password: 12345678
-    h2:
-        console:
-            enabled: false
-    jpa:
-        database-platform: com.rhinomarket.infra.config.util.FixedPostgreSQL82Dialect
-        database: POSTGRESQL
-        show_sql: true
-        properties:
-            hibernate.cache.use_second_level_cache: true
-            hibernate.cache.use_query_cache: false
-            hibernate.generate_statistics: true
-            hibernate.hbm2ddl.auto : update
-            hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
-    mail:
+  profiles:
+      active: dev
+  datasource:
+      driver-class-name: org.h2.jdbcx.JdbcDataSource
+      url: jdbc:h2:mem:sampleapplication;DB_CLOSE_DELAY=-1
+      name:
+      username: dynamos
+      password:
+  h2:
+   console:
+       enabled: false
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    database: H2
+    show_sql: true
+    properties:
+          hibernate.cache.use_second_level_cache: true
+          hibernate.cache.use_query_cache: false
+          hibernate.generate_statistics: true
+          hibernate.hbm2ddl.auto : update
+          hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+  mail:
         host: localhost
-    messages:
+  messages:
         cache-seconds: 1
-    thymeleaf:
+  thymeleaf:
         cache: false
-    devtools:
+  devtools:
       livereload:
         enabled: true
       restart:
@@ -34,6 +34,9 @@ spring:
 
 server:
     port: 8080
+    compression:
+      enabled: true
+      mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
 
 application:
     rememberMeToken: 579e692c41015e794535b91d4020ce0acd51c118

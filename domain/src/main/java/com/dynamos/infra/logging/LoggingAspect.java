@@ -9,6 +9,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.Constants;
 import org.springframework.core.env.Environment;
 
 import java.util.Arrays;
@@ -28,10 +29,11 @@ public class LoggingAspect {
     public void loggingPointcut() {
     }
 
+
     @AfterThrowing(pointcut = "loggingPointcut()", throwing = "e")
     public void logAfterThrowing(JoinPoint joinPoint, Throwable e) {
-        if (env.getProperty("profile").equals("dev")) {
-            log.error("Exception in {}.{}() with cause = {}", joinPoint.getSignature().getDeclaringTypeName(),
+        if (env.acceptsProfiles("dev")) {
+            log.error("Exception in {}.{}() with cause = {} and exception {}", joinPoint.getSignature().getDeclaringTypeName(),
                     joinPoint.getSignature().getName(), e.getCause(), e);
         } else {
             log.error("Exception in {}.{}() with cause = {}", joinPoint.getSignature().getDeclaringTypeName(),
