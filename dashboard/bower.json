@@ -1,0 +1,9 @@
+{
+  "name": "Dynamos Commerce",
+  "version": "2.0",
+  "appPath": "src/main/resources/static/",
+  "resolutions": {
+    "angular": "1.5.0",
+    "jquery": "2.1.4"
+  }
+}

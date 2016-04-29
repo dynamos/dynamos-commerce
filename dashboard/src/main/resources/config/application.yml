@@ -1,0 +1,52 @@
+spring:
+    profiles:
+        active: dev
+    datasource:
+        driver-class-name: org.postgresql.ds.PGSimpleDataSource
+        url: jdbc:postgresql://localhost:5432/rhino
+        name:
+        username: postgres
+        password: 12345678
+    h2:
+        console:
+            enabled: false
+    jpa:
+        database-platform: com.rhinomarket.infra.config.util.FixedPostgreSQL82Dialect
+        database: POSTGRESQL
+        show_sql: true
+        properties:
+            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.hbm2ddl.auto : update
+            hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    mail:
+        host: localhost
+    messages:
+        cache-seconds: 1
+    thymeleaf:
+        cache: false
+    devtools:
+      livereload:
+        enabled: true
+      restart:
+        enabled: true
+
+server:
+    port: 8080
+
+application:
+    rememberMeToken: 579e692c41015e794535b91d4020ce0acd51c118
+    cache: #
+        timeToLiveSeconds: 3600
+        maxBytesLocalHeap: 16M
+    mail:
+        from: sampleApplication@localhost
+    metrics:
+        jmx:
+          enabled: true
+    async:
+            corePoolSize: 2
+            maxPoolSize: 50
+            queueCapacity: 10000
+
