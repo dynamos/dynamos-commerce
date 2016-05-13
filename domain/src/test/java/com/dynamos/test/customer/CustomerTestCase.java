@@ -17,22 +17,26 @@
 
 package com.dynamos.test.customer;
 
+import com.dynamos.DomainApplication;
 import com.dynamos.domain.entity.Customer;
 import com.dynamos.domain.service.CustomerService;
-import com.dynamos.test.DomainApplicationTests;
 import com.dynamos.test.util.GenerateData;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Created by adelmo.pereira on 23/12/2015.
  */
-
-public class CustomerTestCase extends DomainApplicationTests {
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = DomainApplication.class)
+public class CustomerTestCase {
 
     @Autowired
     private GenerateData generateData;

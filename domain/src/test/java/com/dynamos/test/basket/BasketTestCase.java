@@ -1,13 +1,16 @@
 package com.dynamos.test.basket;
 
+import com.dynamos.DomainApplication;
 import com.dynamos.domain.entity.Basket;
 import com.dynamos.domain.entity.ItemBasket;
 import com.dynamos.domain.service.BasketService;
-import com.dynamos.test.DomainApplicationTests;
 import com.dynamos.test.util.GenerateData;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
@@ -15,7 +18,9 @@ import java.util.HashSet;
 /**
  * Created by adelm_000 on 14/01/2016.
  */
-public class BasketTestCase extends DomainApplicationTests {
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = DomainApplication.class)
+public class BasketTestCase {
 
     @Autowired
     private GenerateData generateData;

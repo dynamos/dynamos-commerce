@@ -17,19 +17,24 @@
 
 package com.dynamos.test.wishlist;
 
+import com.dynamos.DomainApplication;
 import com.dynamos.domain.entity.Wishlist;
 import com.dynamos.domain.service.WishlistService;
-import com.dynamos.test.DomainApplicationTests;
 import com.dynamos.test.util.GenerateData;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
 
 /**
  * Created by adelmo.pereira on 23/12/2015.
  */
-public class WishlistServiceTest extends DomainApplicationTests {
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = DomainApplication.class)
+public class WishlistServiceTest {
 
     @Autowired
     private WishlistService wishlistService;
