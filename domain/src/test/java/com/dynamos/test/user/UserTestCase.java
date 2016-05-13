@@ -16,14 +16,18 @@
  */
 package com.dynamos.test.user;
 
-import com.dynamos.test.DomainApplicationTests;
+import com.dynamos.DomainApplication;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Created by adelmo.pereira on 20/11/2015.
  */
-
-public class UserTestCase extends DomainApplicationTests {
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = DomainApplication.class)
+public class UserTestCase {
 
     @Test
     public void anotherTest(){}

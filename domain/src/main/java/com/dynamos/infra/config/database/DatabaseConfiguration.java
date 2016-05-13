@@ -7,6 +7,7 @@ import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.context.annotation.Bean;
@@ -37,13 +38,8 @@ public class DatabaseConfiguration {
     private MetricRegistry metricRegistry;
 
     @Bean
-    public DataSource dataSource(DataSourceProperties dataSourceProperties, ApplicationProperties applicationProperties) {
+    public DataSource dataSource(DataSourceProperties dataSourceProperties) {
         log.debug("Configuring Datasource");
-
-        if (applicationProperties.isEmbeddedDatasource()) {
-            log.debug("Embedded  Datasource Selected");
-            return embeddedDatasource();
-        }
 
         if (dataSourceProperties.getUrl() == null) {
             log.error("Your database connection pool configuration is incorrect! The application" +
@@ -53,32 +49,18 @@ public class DatabaseConfiguration {
             throw new ApplicationContextException("Database connection pool is not configured correctly");
         }
 
-        HikariConfig config = new HikariConfig();
-        config.setDataSourceClassName(dataSourceProperties.getDriverClassName());
-        config.addDataSourceProperty("url", dataSourceProperties.getUrl());
-
-        if (dataSourceProperties.getUsername() != null) {
-            config.addDataSourceProperty("user", dataSourceProperties.getUsername());
-        } else {
-            config.addDataSourceProperty("user", ""); // HikariCP doesn't allow null user
-        }
-        if (dataSourceProperties.getPassword() != null) {
-            config.addDataSourceProperty("password", dataSourceProperties.getPassword());
-        } else {
-            config.addDataSourceProperty("password", ""); // HikariCP doesn't allow null password
-        }
-
+        HikariDataSource hikariDataSource = (HikariDataSource) DataSourceBuilder
+                .create(dataSourceProperties.getClassLoader())
+                .type(HikariDataSource.class)
+                .driverClassName(dataSourceProperties.getDriverClassName())
+                .url(dataSourceProperties.getUrl())
+                .username(dataSourceProperties.getUsername())
+                .password(dataSourceProperties.getPassword())
+                .build();
         if (metricRegistry != null) {
-            config.setMetricRegistry(metricRegistry);
+            hikariDataSource.setMetricRegistry(metricRegistry);
         }
 
-        return new HikariDataSource(config);
+        return hikariDataSource;
     }
-
-    public DataSource embeddedDatasource() {
-        EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-        EmbeddedDatabase db = builder.setType(EmbeddedDatabaseType.H2).build();
-        return db;
-    }
-
 }

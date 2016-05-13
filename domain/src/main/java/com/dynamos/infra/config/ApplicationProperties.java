@@ -9,7 +9,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "application", ignoreUnknownFields = false)
 public class ApplicationProperties {
 
-    private boolean embeddedDatasource = false;
     private String rememberMeToken;
 
     private Cache cache = new Cache();
@@ -138,14 +137,6 @@ public class ApplicationProperties {
 
     public void setAsync(Async async) {
         this.async = async;
-    }
-
-    public boolean isEmbeddedDatasource() {
-        return embeddedDatasource;
-    }
-
-    public void setEmbeddedDatasource(boolean embeddedDatasource) {
-        this.embeddedDatasource = embeddedDatasource;
     }
 
     public String getRememberMeToken() {

@@ -17,15 +17,18 @@
 
 package com.dynamos.test.product;
 
+import com.dynamos.DomainApplication;
 import com.dynamos.domain.entity.Product;
 import com.dynamos.domain.entity.ProductAttribute;
 import com.dynamos.domain.entity.Sku;
 import com.dynamos.domain.service.ProductService;
-import com.dynamos.test.DomainApplicationTests;
 import com.dynamos.test.util.GenerateData;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -37,7 +40,9 @@ import static org.junit.Assert.assertNotNull;
 /**
  * Created by adelmo.pereira on 23/12/2015.
  */
-public class ProductTestCase extends DomainApplicationTests {
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest(classes = DomainApplication.class)
+public class ProductTestCase {
 
     @Autowired
     private ProductService productService;

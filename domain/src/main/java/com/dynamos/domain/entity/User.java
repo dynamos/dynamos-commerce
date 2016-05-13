@@ -1,5 +1,5 @@
 /*
- * Copyright (C)  2015  Rhino Web Store
+ * Copyright (C)  2015-2016 Dynamos Commerce
  *
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ import java.util.Set;
  * A user.
  */
 @Entity
-@Table(name = "rhino_user")
+@Table(name = "dynamos_user")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class User extends AbstractAuditingEntity implements Serializable {
 
@@ -45,7 +45,7 @@ public class User extends AbstractAuditingEntity implements Serializable {
     private Long id;
 
     @NotEmpty(message = "{system.validation.not_null}")
-    @Pattern(regexp = "^[a-z0-9]*$|(anonymousUser)")
+    @Pattern(regexp = "^[a-z0-9]*$")
     @Size(min = 1, max = 50)
     @Column(length = 50, unique = true, nullable = false)
     private String login;
