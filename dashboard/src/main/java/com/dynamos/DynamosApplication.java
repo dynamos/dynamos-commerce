@@ -13,14 +13,14 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 @EnableAutoConfiguration(exclude = { MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class })
 @EnableConfigurationProperties({ ApplicationProperties.class})
-public class RhinoDashboardApplication extends SpringBootServletInitializer {
+public class DynamosApplication extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(RhinoDashboardApplication.class);
+		return application.sources(DynamosApplication.class);
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(RhinoDashboardApplication.class, args);
+		SpringApplication.run(DynamosApplication.class, args);
 	}
 }
