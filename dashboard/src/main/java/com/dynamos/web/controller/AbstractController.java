@@ -1,6 +1,6 @@
 package com.dynamos.web.controller;
 
-import com.dynamos.infra.service.LoadMessageResource;
+import com.dynamos.domain.service.LoadMessageResource;
 import com.dynamos.dto.Message;
 import com.dynamos.dto.ValidationErrorMessage;
 import org.springframework.beans.factory.annotation.Autowired;

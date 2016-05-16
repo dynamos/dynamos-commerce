@@ -23,8 +23,8 @@ angular.module('rhinoApplication').config(function ($stateProvider, $urlRouterPr
                 templateUrl: '/layout?view=nav-header'
             }
             ,
-            'top-menu@': {
-                templateUrl: '/layout?view=top-menu'
+            'side-bar@': {
+                templateUrl: '/layout?view=side-bar'
             }
         },
         data: {

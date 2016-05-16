@@ -1,36 +1,31 @@
 spring:
-  profiles:
-      active: dev
-  datasource:
-      driver-class-name: org.h2.jdbcx.JdbcDataSource
-      url: jdbc:h2:mem:sampleapplication;DB_CLOSE_DELAY=-1
-      name:
-      username: dynamos
-      password:
-  h2:
-   console:
-       enabled: false
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    database: H2
-    show_sql: true
-    properties:
-          hibernate.cache.use_second_level_cache: true
-          hibernate.cache.use_query_cache: false
-          hibernate.generate_statistics: true
-          hibernate.hbm2ddl.auto : update
-          hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
-  mail:
+    datasource:
+        url: jdbc:h2:mem:dynamos
+        name:
+        username: sa
+        password: pass
+    h2:
+        console:
+            enabled: false
+    jpa:
+        database-platform:  org.hibernate.dialect.H2Dialect
+        database: h2
+        show_sql: true
+        properties:
+            hibernate.hbm2ddl.auto : create
+            hibernate.cache.use_second_level_cache: true
+            hibernate.cache.use_query_cache: false
+            hibernate.generate_statistics: true
+            hibernate.cache.region.factory_class: org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+    mail:
         host: localhost
-  messages:
-        cache-seconds: 1
-  thymeleaf:
-        cache: false
-  devtools:
-      livereload:
-        enabled: true
-      restart:
-        enabled: true
+    devtools:
+        livereload:
+          enabled: true
+        restart:
+          enabled: true
+    thymeleaf:
+      mode: LEGACYHTML5
 
 server:
     port: 8080
@@ -39,17 +34,17 @@ server:
       mime-types: text/html,text/xml,text/plain,text/css, application/javascript, application/json
 
 application:
-    rememberMeToken: 579e692c41015e794535b91d4020ce0acd51c118
-    cache: #
+    cache:
         timeToLiveSeconds: 3600
         maxBytesLocalHeap: 16M
     mail:
         from: sampleApplication@localhost
     metrics:
         jmx:
-          enabled: true
+          enabled: false
     async:
-            corePoolSize: 2
-            maxPoolSize: 50
-            queueCapacity: 10000
+        corePoolSize: 2
+        maxPoolSize: 50
+        queueCapacity: 10000
+
 

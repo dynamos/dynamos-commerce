@@ -14,7 +14,7 @@ public class LayoutController {
 
 
     @RequestMapping(method = RequestMethod.GET)
-    public String returnView(@RequestParam("view") String viewName){
-        return "layout/" + viewName;
+    public String returnView(@RequestParam("view") String viewName) {
+        return viewName;
     }
 }

@@ -91,7 +91,7 @@ public class GenerateData {
     private void insertAdminUser(){
         admin = new User();
         admin.setLogin("admin");
-        admin.setPassword(passwordEncoder.encode("admin"));
+        admin.setPassword(passwordEncoder.encode("123456"));
         admin.setFirstName("admin");
         admin.setLastName("localhost");
         admin.setEmail("admin@localhost");
