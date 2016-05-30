@@ -13,6 +13,6 @@ public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
     public String index() {
-        return "index";
+        return "dashboard/index";
     }
 }

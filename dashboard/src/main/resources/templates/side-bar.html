@@ -1,212 +1,81 @@
-<ul class="nav nav-list">
-    <li class="active">
-        <a href="index.html">
-            <i class="menu-icon fa fa-tachometer"></i>
-            <span class="menu-text"> Dashboard </span>
-        </a>
+<div class="left_col scroll-view">
+    <div class="navbar nav_title" style="border: 0;">
+        <a th:href="@{/}"  class="site_title"><i class="fa fa-spinner"></i> <span>Dynamos</span></a>
+    </div>
 
-        <b class="arrow"></b>
-    </li>
+    <div class="clearfix"></div>
 
-    <li class="">
-        <a href="#" class="dropdown-toggle">
-            <i class="menu-icon fa fa-desktop"></i>
-							<span class="menu-text">
-								UI &amp; Elements
-							</span>
+    <!-- menu profile quick info -->
+    <div class="profile">
+        <div class="profile_pic">
+            <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+        </div>
+        <div class="profile_info">
+            <span>Welcome,</span>
+            <h2>John Doe</h2>
+        </div>
+    </div>
+    <!-- /menu profile quick info -->
 
-            <b class="arrow fa fa-angle-down"></b>
-        </a>
+    <br/>
 
-        <b class="arrow"></b>
-
-        <ul class="submenu">
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-caret-right"></i>
-
-                    Layouts
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="top-menu.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Top Menu
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="two-menu-1.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Two Menus 1
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="two-menu-2.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Two Menus 2
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="mobile-menu-1.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Default Mobile Menu
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="mobile-menu-2.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Mobile Menu 2
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="mobile-menu-3.html">
-                            <i class="menu-icon fa fa-caret-right"></i>
-                            Mobile Menu 3
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="">
-                <a href="typography.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    Typography
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="">
-                <a href="elements.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    Elements
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="">
-                <a href="buttons.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    Buttons &amp; Icons
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="">
-                <a href="content-slider.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    Content Sliders
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="">
-                <a href="treeview.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    Treeview
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="">
-                <a href="jquery-ui.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    jQuery UI
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="">
-                <a href="nestable-list.html">
-                    <i class="menu-icon fa fa-caret-right"></i>
-                    Nestable Lists
-                </a>
-
-                <b class="arrow"></b>
-            </li>
-
-            <li class="">
-                <a href="#" class="dropdown-toggle">
-                    <i class="menu-icon fa fa-caret-right"></i>
-
-                    Three Level Menu
-                    <b class="arrow fa fa-angle-down"></b>
-                </a>
-
-                <b class="arrow"></b>
-
-                <ul class="submenu">
-                    <li class="">
-                        <a href="#">
-                            <i class="menu-icon fa fa-leaf green"></i>
-                            Item #1
-                        </a>
-
-                        <b class="arrow"></b>
-                    </li>
-
-                    <li class="">
-                        <a href="#" class="dropdown-toggle">
-                            <i class="menu-icon fa fa-pencil orange"></i>
-
-                            4th level
-                            <b class="arrow fa fa-angle-down"></b>
-                        </a>
-
-                        <b class="arrow"></b>
-
-                        <ul class="submenu">
-                            <li class="">
-                                <a href="#">
-                                    <i class="menu-icon fa fa-plus purple"></i>
-                                    Add Product
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-
-                            <li class="">
-                                <a href="#">
-                                    <i class="menu-icon fa fa-eye pink"></i>
-                                    View Products
-                                </a>
-
-                                <b class="arrow"></b>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </li>
-</ul>
-<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-    <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left"
-       data-icon2="ace-icon fa fa-angle-double-right"></i>
+    <!-- sidebar menu -->
+    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+        <div class="menu_section">
+            <h3>e-Commerce</h3>
+            <ul class="nav side-menu">
+                <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="layout.html">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li><a><i class="fa fa-usd"></i> Vendas <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="tables.html">Tables</a></li>
+                        <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-cubes"></i> Produtos <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a th:href="@{/produtos/cadastro}">Cadastrar</a></li>
+                        <li><a th:href="@{/produtos}">Consultar</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa  fa-diamond"></i> Customers <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a th:href="@{/customers}">Consultar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="menu_section">
+            <h3>Conteúdo</h3>
+            <ul class="nav side-menu">
+                <li><a><i class="fa fa-envira"></i> Blog <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="tables.html">Nova Postagem</a></li>
+                        <li><a href="tables_dynamic.html">Postagens</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-cubes"></i> Páginas <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a th:href="@{/produtos/cadastro}">Cadastrar</a></li>
+                        <li><a th:href="@{/produtos}">Consultar</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a><i class="fa fa-cog"></i> Ferramentas <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a th:href="@{/seo}">SEO </a></li>
+                        <li><a th:href="@{/analytics}">Google Analytics </a></li>
+                        <li><a th:href="@{/emarketing}">E-mail Marketing </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /sidebar menu -->
 </div>

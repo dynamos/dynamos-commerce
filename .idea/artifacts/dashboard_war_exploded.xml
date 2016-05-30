@@ -11,7 +11,7 @@
             <element id="module-output" name="domain" />
           </element>
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-security:1.4.0.BUILD-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.1.0.RELEASE" />
@@ -19,15 +19,15 @@
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-actuator:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-actuator:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-cache:1.4.0.BUILD-SNAPSHOT" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.0.RC2" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.0.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-aop:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.9" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-jdbc:8.0.33" />
           <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-juli:8.0.33" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.1.0.Final" />
           <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
           <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
@@ -36,10 +36,10 @@
           <element id="library" level="project" name="Maven: javax.transaction:javax.transaction-api:1.2" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.10.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.12.1.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.3.0.RC2" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.3.0.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.21" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-mail:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.5" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
@@ -47,7 +47,7 @@
           <element id="library" level="project" name="Maven: com.h2database:h2:1.4.191" />
           <element id="library" level="project" name="Maven: org.assertj:assertj-core:2.4.1" />
           <element id="library" level="project" name="Maven: com.ryantenney.metrics:metrics-spring:3.1.2" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: io.dropwizard.metrics:metrics-core:3.1.2" />
           <element id="library" level="project" name="Maven: io.dropwizard.metrics:metrics-annotation:3.1.2" />
           <element id="library" level="project" name="Maven: io.dropwizard.metrics:metrics-ehcache:3.1.2" />
@@ -97,9 +97,9 @@
           <element id="library" level="project" name="Maven: org.codehaus.groovy:groovy:2.4.6" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.7.4" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.0.RC2" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.0.RC2" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:4.3.0.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.3.0.BUILD-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-tomcat:1.4.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.0.33" />
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:8.0.33" />
@@ -111,7 +111,7 @@
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
           <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.21" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.0.BUILD-SNAPSHOT" />
           <element id="library" level="project" name="Maven: net.sourceforge.nekohtml:nekohtml:1.9.22" />
           <element id="library" level="project" name="Maven: xerces:xercesImpl:2.11.0" />
           <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.4.01" />
