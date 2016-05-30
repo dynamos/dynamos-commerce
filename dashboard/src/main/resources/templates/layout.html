@@ -3,7 +3,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
->
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <base href="/"/>
 
@@ -15,11 +15,8 @@
 
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
     <link rel="stylesheet" th:href="@{/fonts/css/font-awesome.min.css}"/>
-    <link rel="stylesheet" th:href="@{/css/animate.min.css}"/>
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>
-    <link rel="stylesheet" th:href="@{/css/ace.min.css}" class="ace-main-stylesheet" id="main-ace-style"/>
+    <link rel="stylesheet" th:href="@{/css/custom.css}"/>
     <link rel=" tylesheet" th:href="@{/css/normalize.css}"/>
-    <link rel="stylesheet" th:href="@{/css/fonts.googleapis.com.css}"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:/ -->
@@ -32,14 +29,19 @@
 
     <title>Dashboard - Dynamos</title>
 </head>
-<body ng-app="rhinoApplication" class="nav-md">
+<body class="nav-md">
 
-<div class="no-skin">
-    <div id="navbar" class="navbar navbar-default" ui-view="nav-header"></div>
-    <div id="main-container" class="main-container">
-        <div id="sidebar" class="sidebar responsive" ui-view="side-bar"></div>
-
-        <div class="main-content" ui-view="content"></div>
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col" th:include="side-bar"></div>
+        <div class="top_nav" th:include="nav-header"></div>
+        <div class="right_col" role="main" layout:fragment="content"></div>
+        <footer>
+            <div class="pull-right">
+                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
     </div>
 </div>
 
@@ -55,8 +57,6 @@
 <script th:src="@{/js/components/json/json3.min.js}"></script>
 <script th:src="@{/js/components/jquery/jquery.min.js}"></script>
 <script th:src="@{/js/components/bootstrap/bootstrap.min.js}"></script>
-<script th:src="@{/js/components/template/ace-elements.min.js}"></script>
-<script th:src="@{/js/components/template/ace.min.js}"></script>
 
 
 <script type="text/javascript" src="js/dist/app.js"></script>
