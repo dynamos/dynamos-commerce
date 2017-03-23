@@ -1,6 +1,5 @@
-package br.com.dynamos.infra.handler.exception;
+package com.dynamos.infra.handler.exception;
 
-import br.com.dynamos.infra.utils.HttpHeadersUtil;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,9 +20,8 @@ public class ControllerExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity exception(Exception ex) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).headers(HttpHeadersUtil.createErrorAlert(ex.getMessage())).build();
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).headers(createAlert(ex.getMessage())).build();
     }
-
 
     public static HttpHeaders createAlert(String message) {
         HttpHeaders headers = new HttpHeaders();

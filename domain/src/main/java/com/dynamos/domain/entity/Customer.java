@@ -35,8 +35,8 @@ import java.util.Set;
  * Created by adelmo.pereira on 22/12/2015.
  */
 @Entity
-@Table(name = "rhino_customer")
-public class Customer extends AbstractAuditingEntity implements Serializable {
+@Table(name = "dyn_customer")
+public class Customer  implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

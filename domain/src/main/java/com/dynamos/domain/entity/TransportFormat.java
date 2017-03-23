@@ -1,10 +1,10 @@
 package com.dynamos.domain.entity;
 
+import com.sun.istack.internal.NotNull;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ import java.util.Objects;
  * A TransportFormat.
  */
 @Entity
-@Table(name = "rhino_custom_format")
+@Table(name = "dynamos_custom_format")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class TransportFormat implements Serializable {
 

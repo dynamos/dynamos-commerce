@@ -27,8 +27,6 @@ public class ManagedUserVO extends UserVO {
         super(user);
         this.id = user.getId();
         this.createdDate = user.getCreatedDate();
-        this.lastModifiedBy = user.getLastModifiedBy();
-        this.lastModifiedDate = user.getLastModifiedDate();
     }
 
     public Long getId() {

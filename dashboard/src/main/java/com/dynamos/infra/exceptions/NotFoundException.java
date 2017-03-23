@@ -1,4 +1,4 @@
-package br.com.dynamos.infra.exceptions;
+package com.dynamos.infra.exceptions;
 
 /**
  * Created by Adelmo Alves on 09/01/2017.

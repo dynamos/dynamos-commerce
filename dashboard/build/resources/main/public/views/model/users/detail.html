@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-user"></i> User Detail
+        <div class="pull-right">
+            <button class="btn btn-primary" ui-sref="users">
+                <i class="fa fa-backward"></i>
+                <span class="hidden-xs hidden-sm">Back</span>
+            </button>
+        </div>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="get" class="form-vertical" ng-submit="save()">
+                    <div class="form-group">
+                        <label for="input-user-name">Name</label>
+                        <input id="input-user-name" type="text" ng-model="user.name" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-user-email">Email</label>
+                        <input id="input-user-email" type="email" class="form-control" ng-model="user.email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="input-user-city">City</label>
+                        <input id="input-user-city" type="text" class="form-control" ng-model="user.city"/>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn  btn-primary" type="submit">Save</button>
+                        <a ui-sref="users" class="btn  btn-default">Cancel</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

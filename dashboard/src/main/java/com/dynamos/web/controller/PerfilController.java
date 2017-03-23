@@ -41,14 +41,14 @@ public class PerfilController extends AbstractController{
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> salvar(@Validated @RequestBody ManagedUserVO user, Errors errors){
         if(errors.hasErrors()){
-            return new ResponseEntity(addValidationErrorMessage(errors), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>(addValidationErrorMessage(errors), HttpStatus.BAD_REQUEST);
         }
         try{
             userService.updateUserInformation(user.getEmail());
 
-            return new ResponseEntity(new Message(getMessage("system.success"), getMessage("system.perfil.success_update"), MessageType.SUCCESS), HttpStatus.OK);
+            return new ResponseEntity<>(new Message(getMessage("system.success"), getMessage("system.perfil.success_update"), MessageType.SUCCESS), HttpStatus.OK);
         }catch(Exception ex){
-            return new ResponseEntity(new Message(getMessage("system.danger"), getMessage("system.perfil.error_update"), MessageType.DANGER), HttpStatus.OK);
+            return new ResponseEntity<>(new Message(getMessage("system.danger"), getMessage("system.perfil.error_update"), MessageType.DANGER), HttpStatus.OK);
         }
     }
 }

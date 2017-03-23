@@ -1,7 +1,7 @@
 package com.dynamos.domain.service;
 
 import com.dynamos.domain.entity.User;
-import org.apache.commons.lang.CharEncoding;
+import org.apache.commons.lang3.CharEncoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

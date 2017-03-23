@@ -1,0 +1,93 @@
+<!--
+ * Pandora Admin
+ * @version v1.0
+ * @link http://pandora.io
+ * Copyright (c) 2016 creativeLabs and Dynamos Labs
+ * @license MIT
+ -->
+<!DOCTYPE html>
+<html lang="pt_BR" ng-app="pandora">
+
+<head>
+    <base href="/"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pandora Admin">
+    <meta name="author" content="Adelmo Alves">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Pandora Admin</title>
+
+    <!-- Main styles for this application   -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/angular-block-ui.min.css">
+</head>
+
+<!-- BODY options, add following classes to body to change options
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+			2.1. 'sidebar-off-canvas'	- Off-Canvas
+				2.1.1 'sidebar-off-canvas-push'	- Off-Canvas which move content
+				2.1.2 'sidebar-off-canvas-with-shadow'	- Add shadow to body elements
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+		5. 'footer-fixed'		  - Fixed navbar
+	-->
+<body class="navbar-fixed sidebar-nav fixed-nav" ng-cloak>
+
+    <!-- User Interface -->
+    <ui-view></ui-view>
+
+    <!-- bower:js -->
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/tether.js"></script>
+    <script src="js/libs/bootstrap.js"></script>
+    <script src="js/libs/angular.js"></script>
+    <script src="js/libs/ocLazyLoad.js"></script>
+    <script src="js/libs/angular-ui-router.js"></script>
+    <script src="js/libs/angular-breadcrumb.js"></script>
+    <script src="js/libs/Chart.js"></script>
+    <script src="js/libs/angular-chart.js"></script>
+    <script src="js/libs/ui-bootstrap-tpls.js"></script>
+    <script src="js/libs/angular-cache-buster.js"></script>
+    <script src="js/libs/angular-route.js"></script>
+    <script src="js/libs/message-center.js"></script>
+    <script src="js/libs/angular-resource.js"></script>
+    <script src="js/libs/angular-block-ui.js"></script>
+    <!-- endbower -->
+
+    <!-- AngularJS PandoraUI App scripts -->
+    <!-- inject:js -->
+    <script src="js/app/pandora.js"></script>
+    <script src="js/app/config/http.config.js"></script>
+    <script src="js/app/config/locationProvider.config.js"></script>
+    <script src="js/app/config/state.config.js"></script>
+    <script src="js/app/config/uib-pagination.config.js"></script>
+    <script src="js/app/controllers/main.js"></script>
+    <script src="js/app/routes/routes.js"></script>
+    <script src="js/app/components/handlers/state.handler.js"></script>
+    <script src="js/app/components/interceptor/auth-expired.interceptor.js"></script>
+    <script src="js/app/components/interceptor/errorhanlder.interceptor.js"></script>
+    <script src="js/app/components/interceptor/notification.interceptor.js"></script>
+    <script src="js/app/components/layout/directives.js"></script>
+    <script src="js/app/components/security/auth.service.js"></script>
+    <script src="js/app/components/security/has-any-authority.directive.js"></script>
+    <script src="js/app/components/security/has-authority.directive.js"></script>
+    <script src="js/app/components/security/login.controller.js"></script>
+    <script src="js/app/components/security/principal.service.js"></script>
+    <script src="js/app/components/security/state.js"></script>
+    <script src="js/app/model/account/account.controller.js"></script>
+    <script src="js/app/model/account/resource.js"></script>
+    <script src="js/app/model/account/routes.js"></script>
+    <script src="js/app/model/users/create.controller.js"></script>
+    <script src="js/app/model/users/detail.user.controller.js"></script>
+    <script src="js/app/model/users/resource.js"></script>
+    <script src="js/app/model/users/routes.js"></script>
+    <script src="js/app/model/users/search.controller.js"></script>
+    <script src="js/app/model/users/service.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

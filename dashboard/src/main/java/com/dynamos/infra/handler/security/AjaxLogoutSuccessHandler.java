@@ -1,4 +1,4 @@
-package br.com.dynamos.infra.handler.security;
+package com.dynamos.infra.handler.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AbstractAuthenticationTargetUrlRequestHandler;
@@ -13,9 +13,9 @@ import java.io.IOException;
 @Component
 public class AjaxLogoutSuccessHandler extends AbstractAuthenticationTargetUrlRequestHandler implements LogoutSuccessHandler {
 
-	@Override
-	public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
-			throws IOException, ServletException {
-		response.setStatus(HttpServletResponse.SC_OK);
-	}
+    @Override
+    public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication)
+            throws IOException, ServletException {
+        response.setStatus(HttpServletResponse.SC_OK);
+    }
 }

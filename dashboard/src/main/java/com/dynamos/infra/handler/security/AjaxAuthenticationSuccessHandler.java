@@ -1,4 +1,4 @@
-package br.com.dynamos.infra.handler.security;
+package com.dynamos.infra.handler.security;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;

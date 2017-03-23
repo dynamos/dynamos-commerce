@@ -1,12 +1,9 @@
 package com.dynamos.web.controller;
 
 import com.dynamos.domain.service.LoadMessageResource;
-import com.dynamos.dto.Message;
 import com.dynamos.dto.ValidationErrorMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,13 +16,6 @@ public class AbstractController {
     @Autowired
     private LoadMessageResource loadMessageResource;
 
-    protected void addMessage(RedirectAttributes redirectAttributes, Message ...messages){
-        redirectAttributes.addFlashAttribute("messages", messages);
-    }
-
-    protected void addMessage(ModelAndView modelAndView, Message ...messages){
-        modelAndView.addObject("messages", messages);
-    }
 
     protected List<ValidationErrorMessage> addValidationErrorMessage(Errors errors){
         List<ValidationErrorMessage> errorMessageList = new ArrayList<>();

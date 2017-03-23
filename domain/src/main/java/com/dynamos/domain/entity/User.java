@@ -36,9 +36,9 @@ import java.util.Set;
  * A user.
  */
 @Entity
-@Table(name = "dynamos_user")
+@Table(name = "dyn_user")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-public class User extends AbstractAuditingEntity implements Serializable {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -91,10 +91,13 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(name = "latest_login")
     private LocalDateTime latestLogin;
 
+    @Column(name = "created_date")
+    private LocalDateTime createdDate;
+
     @JsonIgnore
     @ManyToMany
     @JoinTable(
-            name = "rhino_user_authority",
+            name = "dyn_user_authority",
             joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "name")})
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
@@ -234,6 +237,14 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     public void setLatestLogin(LocalDateTime latestLogin) {
         this.latestLogin = latestLogin;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
     }
 
     @Override

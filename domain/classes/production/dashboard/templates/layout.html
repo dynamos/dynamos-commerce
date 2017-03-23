@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <base th:href="@{/}"/>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/font-awesome.css}"/>
+    <link rel=" tylesheet" th:href="@{/css/normalize.css}"/>
+    <link rel="stylesheet" th:href="@{/css/custom.css}"/>
+
+    <title>Dashboard - Dynamos</title>
+</head>
+<body class="nav-md">
+
+<div class="container body">
+    <div class="main_container">
+        <div class="col-md-3 left_col" th:include="side-bar"></div>
+
+        <div class="top_nav" th:include="nav-header"></div>
+
+        <div class="right_col" role="main" layout:fragment="content"></div>
+
+        <footer>
+            <div class="pull-right">
+                Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+    </div>
+</div>
+
+
+<script th:src="@{/js/components/jquery/jquery.min.js}"></script>
+<script th:src="@{/js/components/jquery/jquery.mCustomScrollbar.js}"></script>
+<script th:src="@{/js/components/bootstrap/bootstrap.min.js}"></script>
+<script th:src="@{/js/components/template/custom.js}"></script>
+
+</body>
+</html>
