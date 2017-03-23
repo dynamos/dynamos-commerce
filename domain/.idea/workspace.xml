@@ -1,65 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="943f2ca1-d654-4a73-b939-377e5b15181e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/artifacts/dashboard_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/artifacts/dashboard_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/kotlinc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/sqldialects.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../commerce.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../dashboard/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../dynamos-commerce.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../pom.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/dashboard.iml" afterPath="$PROJECT_DIR$/../dashboard/dashboard.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/AppConfig.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/AppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/DynamosApplication.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/DynamosApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/dto/ManagedUserVO.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/dto/ManagedUserVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/config/Security.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/config/Security.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/config/WebAppConfig.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/config/WebAppConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/exceptions/NotFoundException.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/exceptions/NotFoundException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/filter/CsrfCookieGeneratorFilter.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/filter/CsrfCookieGeneratorFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/exception/ControllerExceptionHandler.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/exception/ControllerExceptionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/AjaxAuthenticationFailureHandler.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/AjaxAuthenticationFailureHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/AjaxAuthenticationSuccessHandler.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/AjaxAuthenticationSuccessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/AjaxLogoutSuccessHandler.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/AjaxLogoutSuccessHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/CustomAccessDeniedHandler.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/CustomAccessDeniedHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/Http401UnauthorizedEntryPoint.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/infra/handler/security/Http401UnauthorizedEntryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/controller/AbstractController.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/controller/AbstractController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/controller/PerfilController.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/controller/PerfilController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/filter/CachingHttpHeadersFilter.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/filter/CachingHttpHeadersFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/rest/AccountResource.java" afterPath="$PROJECT_DIR$/../dashboard/src/main/java/com/dynamos/web/rest/AccountResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/config/application.yml" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/config/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/data.sql" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/data.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/public/index.html" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/public/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/app/components/security/route.js" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/app/components/security/route.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/app/pandora.js" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/app/pandora.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/app/routes/routes.js" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/app/routes/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/libs/angular-cache-buster.js" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/libs/angular-cache-buster.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/libs/angular-message-center.js" afterPath="$PROJECT_DIR$/../dashboard/src/main/resources/static/js/libs/angular-message-center.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dashboard/src/test/java/com/dynamos/test/DynamosDashboardApplicationTests.java" afterPath="$PROJECT_DIR$/../dashboard/src/test/java/com/dynamos/test/DynamosDashboardApplicationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/domain.iml" afterPath="$PROJECT_DIR$/.idea/modules/domain.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/domain.iml" afterPath="$PROJECT_DIR$/domain.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/DomainApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/DomainApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/Customer.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/Customer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/ItemBasket.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/ItemBasket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/Product.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/Product.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/TransportFormat.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/TransportFormat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/entity/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/exception/ExceptionHandlingAsyncTaskExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/exception/ExceptionHandlingAsyncTaskExecutor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/service/MailService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/service/MailService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/util/RandomUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/dynamos/domain/util/RandomUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/config/application.yml" afterPath="$PROJECT_DIR$/src/test/resources/config/application.yml" />
-    </list>
+    <list default="true" id="943f2ca1-d654-4a73-b939-377e5b15181e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../dashboard/target/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -136,8 +78,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../dashboard/src/main/resources/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+            <state relative-caret-position="315">
+              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -2562,7 +2504,7 @@
       <option name="presentableId" value="Default" />
       <updated>1490289687617</updated>
       <workItem from="1490289690419" duration="632000" />
-      <workItem from="1490290337826" duration="10052000" />
+      <workItem from="1490290337826" duration="10310000" />
     </task>
     <servers />
   </component>
@@ -2587,7 +2529,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10684000" />
+    <option name="totallyTimeSpent" value="10942000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
@@ -3077,8 +3019,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../dashboard/src/main/resources/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="35" lean-forward="false" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
+        <state relative-caret-position="315">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
           <folding />
         </state>
       </provider>
