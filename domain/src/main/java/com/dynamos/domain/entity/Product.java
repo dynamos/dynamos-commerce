@@ -1,10 +1,10 @@
 package com.dynamos.domain.entity;
 
+import com.sun.istack.internal.NotNull;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ import java.util.Objects;
  * A product.
  */
 @Entity
-@Table(name = "rhino_product")
+@Table(name = "dyn_product")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Product implements Serializable {
 

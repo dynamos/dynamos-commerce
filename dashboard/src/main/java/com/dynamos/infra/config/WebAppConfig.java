@@ -25,7 +25,6 @@ public class WebAppConfig extends WebMvcConfigurerAdapter{
         registry.addInterceptor(localeChangeInterceptor);
     }
 
-
     @Override
     public Validator getValidator() {
         LocalValidatorFactoryBean validator = new LocalValidatorFactoryBean();

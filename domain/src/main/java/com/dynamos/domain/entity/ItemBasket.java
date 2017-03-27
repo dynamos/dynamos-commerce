@@ -15,7 +15,7 @@ import java.util.Objects;
  * A ItemBasket.
  */
 @Entity
-@Table(name = "rhino_item_basket")
+@Table(name = "dynamos_item_basket")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class ItemBasket implements Serializable {
 

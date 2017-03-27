@@ -1,0 +1,51 @@
+<!--
+ * Pandora Admin
+ * @version v1.0
+ * @link http://pandora.io
+ * Copyright (c) 2016 creativeLabs and Dynamos Labs
+ * @license MIT
+ -->
+<!DOCTYPE html>
+<html lang="pt_BR" ng-app="pandora">
+
+<head>
+    <base href="/"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Pandora Admin">
+    <meta name="author" content="Adelmo Alves">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Pandora Admin</title>
+
+    <!-- Main styles for this application   -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/angular-block-ui.min.css">
+</head>
+
+<!-- BODY options, add following classes to body to change options
+		1. 'compact-nav'     	  - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-nav'		  - Navigation on the left
+			2.1. 'sidebar-off-canvas'	- Off-Canvas
+				2.1.1 'sidebar-off-canvas-push'	- Off-Canvas which move content
+				2.1.2 'sidebar-off-canvas-with-shadow'	- Add shadow to body elements
+		3. 'fixed-nav'			  - Fixed navigation
+		4. 'navbar-fixed'		  - Fixed navbar
+		5. 'footer-fixed'		  - Fixed navbar
+	-->
+<body class="navbar-fixed sidebar-nav fixed-nav" ng-cloak>
+
+    <!-- User Interface -->
+    <ui-view></ui-view>
+
+    <!-- bower:js -->
+    <!-- endbower -->
+
+    <!-- AngularJS PandoraUI App scripts -->
+    <!-- inject:js -->
+    <!-- endinject -->
+</body>
+
+</html>
