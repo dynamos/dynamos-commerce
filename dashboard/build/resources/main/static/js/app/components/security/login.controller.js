@@ -4,9 +4,7 @@
 (function () {
     'use strict';
 
-    angular
-        .module('pandora')
-        .controller('LoginController', LoginController);
+    angular.module('pandora').controller('LoginController', LoginController);
 
     LoginController.$inject = ['$scope', 'Auth', 'Principal', '$state'];
 
@@ -18,16 +16,12 @@
                 password: $scope.password
             };
 
-            Auth.login(credentials).then(successCallback, errorCallback);
+            Auth.login(credentials).then(successCallback);
         };
 
         function successCallback() {
             Principal.identity(true);
             $state.go('app.main');
-        }
-
-        function errorCallback(error){
-
         }
     }
 })

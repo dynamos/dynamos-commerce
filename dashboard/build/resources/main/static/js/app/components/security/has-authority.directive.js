@@ -27,6 +27,7 @@
                 setHidden = function () {
                     element.addClass('hidden');
                 },
+
                 defineVisibility = function (reset) {
 
                     if (reset) {
