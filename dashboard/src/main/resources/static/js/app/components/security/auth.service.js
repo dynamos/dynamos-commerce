@@ -18,8 +18,8 @@
         return service;
 
         function login(credentials) {
-            var data = 'j_username=' + encodeURIComponent(credentials.username)
-                + '&j_password=' + encodeURIComponent(credentials.password) + '&submit=Login';
+            var data = 'username=' + encodeURIComponent(credentials.username)
+                + '&password=' + encodeURIComponent(credentials.password) + '&submit=Login';
 
             return $http.post('api/authentication', data, {
                 headers: {

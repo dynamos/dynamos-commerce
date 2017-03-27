@@ -1,12 +1,5 @@
-<!--
- * Pandora Admin
- * @version v1.0
- * @link http://pandora.io
- * Copyright (c) 2016 creativeLabs and Dynamos Labs
- * @license MIT
- -->
 <!DOCTYPE html>
-<html lang="pt_BR">
+<html lang="pt_BR" ng-app="pandora">
 
 <head>
     <base href="/"/>
@@ -21,14 +14,14 @@
 
     <!-- Main styles for this application   -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-block-ui/0.2.2/angular-block-ui.css">
 </head>
 
-<body class="navbar-fixed sidebar-nav fixed-nav"  ng-cloak ng-app="pandora">
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
 
+<!-- User Interface -->
 <ui-view></ui-view>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

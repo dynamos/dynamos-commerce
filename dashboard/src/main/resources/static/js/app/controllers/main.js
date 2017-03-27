@@ -269,10 +269,10 @@ function trafficDemoCtrl($scope){
 dateRangeCtrl.$inject = ['$scope'];
 function dateRangeCtrl($scope) {
     $scope.date = {
-       startDate: moment().subtract(5, 'days'),
-       endDate: moment()
-   };
-   $scope.opts = {
+        startDate: moment().subtract(5, 'days'),
+        endDate: moment()
+    };
+    $scope.opts = {
         drops: 'down',
         opens: 'left',
         ranges: {
@@ -659,8 +659,8 @@ function barChartCtrl($scope) {
 
     $scope.colors = [{
         backgroundColor : brandInfo,
-		borderColor : 'rgba(0,0,0,1)',
-		highlightFill: '#818a91',
+        borderColor : 'rgba(0,0,0,1)',
+        highlightFill: '#818a91',
         pointborderColor: '#000'
     }];
 }
