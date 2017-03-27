@@ -15,7 +15,7 @@
         $stateProvider.state('login', {
             url: '/login',
             templateUrl: 'views/security/login.html',
-            controller: 'LoginController',
+            controller: 'LoginController'
         });
 
         $stateProvider.state('recovery-password', {

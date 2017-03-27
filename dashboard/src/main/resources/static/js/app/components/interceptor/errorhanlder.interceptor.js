@@ -5,43 +5,20 @@
         .module('pandora')
         .factory('errorHandlerInterceptor', errorHandlerInterceptor);
 
-    errorHandlerInterceptor.$inject = ['$q', 'messageCenterService', '$injector'];
+    errorHandlerInterceptor.$inject = ['$q', '$rootScope'];
 
-    function errorHandlerInterceptor($q, messageCenterService, $injector) {
-        var handler = {
+    function errorHandlerInterceptor($q, $rootScope) {
+        var service = {
             responseError: responseError
         };
 
-        return handler;
+        return service;
 
         function responseError(response) {
-            var message = response.data.error != undefined ? response.data.error + ' - ' + response.data.message : undefined;
-
-            message = message == undefined ? response.headers('X-ErrorMessage') : message;
-
-            switch (response.status) {
-                case 0:
-                    messageCenterService.add('Erro', 'O Servidor está fora do ar', {status: messageCenterService.status.shown});
-                    break;
-                case 400:
-                    if (message != null)
-                        messageCenterService.add('danger', message, {status: messageCenterService.status.shown});
-                    else if (response.data && response.data.fieldErrors) {
-
-                    }
-                    break;
-                case 404:
-                    if (message === null) {
-                        var $state = $injector.get('$state');
-                        $state.go('404');
-                    }
-                    else
-                        messageCenterService.add('Erro', 'Solicitação Incorreta. ' + message, {status: messageCenterService.status.shown});
-                    break;
-                case 500:
+            if (!(response.status === 401 && (response.data === '' || (response.data.path && response.data.path.indexOf('/api/account') === 0 )))) {
+                $rootScope.$emit('pandora.httpError', response);
             }
-
-            return err;
+            return $q.reject(response);
         }
     }
 })();
