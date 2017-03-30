@@ -44,7 +44,7 @@
                 var isAuthenticated = Principal.isAuthenticated();
 
                 if (!isAuthenticated) {
-                    if($rootScope.toState.name != 'login'){
+                    if($rootScope.toState.name !== 'login'){
                         $state.go('login');
                     }
                 } else {

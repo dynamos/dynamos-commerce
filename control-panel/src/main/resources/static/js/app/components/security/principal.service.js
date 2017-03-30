@@ -49,7 +49,7 @@
                 return $q.when(false);
             }
 
-            return this.identity().then(function (_id) {
+            return this.identity().then(function () {
                 return hasAnyAuthority(authority);
             }, function () {
                 return false;
