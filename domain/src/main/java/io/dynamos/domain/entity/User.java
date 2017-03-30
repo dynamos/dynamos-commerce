@@ -17,6 +17,7 @@
 
 package io.dynamos.domain.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.Email;
@@ -49,6 +50,7 @@ public class User implements Serializable {
     @Column(length = 50, unique = true, nullable = false)
     private String login;
 
+    @JsonIgnore
     @NotEmpty(message = "{system.validation.not_null}")
     @Size(min = 60, max = 60)
     @Column(length = 60)

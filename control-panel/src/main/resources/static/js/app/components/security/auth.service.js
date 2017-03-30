@@ -29,7 +29,7 @@
         }
 
         function logout() {
-            $http.post('api/logout').success(function (response) {
+            $http.post('api/logout').then(function (response) {
                 Principal.deactivate();
                 $state.go("login");
             });

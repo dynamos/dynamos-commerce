@@ -19,7 +19,7 @@ import java.util.Set;
  * A Purchase.
  */
 @Entity
-@Table(name = "rhino_purchase")
+@Table(name = "dyn_purchase")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Purchase implements Serializable {
 

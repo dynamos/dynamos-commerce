@@ -12,7 +12,7 @@ import java.util.Objects;
  * A ProductCategory.
  */
 @Entity
-@Table(name = "rhino_product_category")
+@Table(name = "dyn_product_category")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class ProductCategory implements Serializable {
 

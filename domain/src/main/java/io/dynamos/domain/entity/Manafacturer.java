@@ -11,7 +11,7 @@ import java.util.Objects;
  * A Manafacturer.
  */
 @Entity
-@Table(name = "rhino_manafacturer")
+@Table(name = "dyn_manafacturer")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Manafacturer implements Serializable {
 

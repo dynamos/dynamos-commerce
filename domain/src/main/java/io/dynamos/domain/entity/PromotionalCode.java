@@ -16,7 +16,7 @@ import java.util.Set;
  * A PromotionalCode.
  */
 @Entity
-@Table(name = "rhino_promotional_code")
+@Table(name = "dyn_promotional_code")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class PromotionalCode implements Serializable {
 
@@ -49,21 +49,21 @@ public class PromotionalCode implements Serializable {
 
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "promotional_code_customer_can_use",
+    @JoinTable(name = "dyn_prom_code_customer_can_use",
             joinColumns = @JoinColumn(name = "promotional_code_id", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "customer_id", referencedColumnName = "ID"))
     private Set<Customer> customerCanUse = new HashSet<>();
 
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "promotional_code_product_category",
+    @JoinTable(name = "dyn_prom_code_product_category",
             joinColumns = @JoinColumn(name = "promotional_codes_id", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "product_categorys_id", referencedColumnName = "ID"))
     private Set<ProductCategory> productCategory = new HashSet<>();
 
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "promotional_code_product",
+    @JoinTable(name = "dyn_prom_code_product",
             joinColumns = @JoinColumn(name = "promotional_codes_id", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "products_id", referencedColumnName = "ID"))
     private Set<Product> products = new HashSet<>();

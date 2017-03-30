@@ -45,7 +45,7 @@ public class Sku implements Serializable {
     private String instructionsForUse;
 
     @NotNull
-    @Column(name = "frabricante_the_warranty_time", nullable = false)
+    @Column(name = "manafacturer_the_warranty_time", nullable = false)
     private Integer manafacturerTheWarrantyTime;
 
     @NotNull

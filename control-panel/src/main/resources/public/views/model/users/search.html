@@ -63,7 +63,7 @@
                                 <input type="checkbox">
                             </th>
                             <th>Name</th>
-                            <th>City</th>
+                            <th>Login</th>
                             <th>E-mail</th>
                             <th>Actions</th>
                         </tr>
@@ -71,16 +71,16 @@
                         <tbody>
                         <tr ng-repeat="user in users">
                             <td><input type="checkbox"></td>
-                            <td>{{user.name}}</td>
-                            <td>{{user.city}}</td>
+                            <td>{{user.firstName + ' ' + user.lastName}}</td>
+                            <td>{{user.login}}</td>
                             <td>{{user.email}}</td>
                             <td>
                                 <div class="btn-group">
-                                    <a class="btn  btn-primary btn-xs" ui-sref="users.detail({id: user.id})">
-                                        <i class="fa  fa-pencil"></i>
+                                    <a class="btn btn-primary btn-xs" ui-sref="users.detail({id: user.id})">
+                                        <i class="fa fa-pencil"></i>
                                     </a>
                                     <button class="btn  btn-danger btn-xs" ng-click="delete(user.id)">
-                                        <i class="fa  fa-trash"></i>
+                                        <i class="fa fa-trash"></i>
                                     </button>
                                 </div>
                             </td>
