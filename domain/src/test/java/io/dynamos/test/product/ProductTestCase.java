@@ -15,14 +15,14 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.dynamos.test.product;
+package io.dynamos.test.product;
 
-import com.dynamos.DomainApplication;
-import com.dynamos.domain.entity.Product;
-import com.dynamos.domain.entity.ProductAttribute;
-import com.dynamos.domain.entity.Sku;
-import com.dynamos.domain.service.ProductService;
-import com.dynamos.test.util.GenerateData;
+import io.dynamos.DomainApplication;
+import io.dynamos.domain.entity.Product;
+import io.dynamos.domain.entity.ProductAttribute;
+import io.dynamos.domain.entity.Sku;
+import io.dynamos.domain.service.ProductService;
+import io.dynamos.test.util.GenerateData;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

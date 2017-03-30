@@ -1,4 +1,4 @@
-package com.dynamos.domain.exception;
+package io.dynamos.domain.exception;
 
 import org.springframework.security.core.AuthenticationException;
 

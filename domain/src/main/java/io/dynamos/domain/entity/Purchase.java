@@ -1,7 +1,6 @@
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.dynamos.domain.entity.enums.StatusPurchase;
+import io.dynamos.domain.entity.enums.StatusPurchase;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -70,7 +69,6 @@ public class Purchase implements Serializable {
     private StatusPurchase statusPurchase;
 
     @OneToMany(mappedBy = "purchase", cascade = CascadeType.ALL)
-    @JsonIgnore
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<ItemPurchase> itemPurchases = new HashSet<>();
 

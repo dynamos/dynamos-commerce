@@ -1,4 +1,4 @@
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
 import com.sun.istack.internal.NotNull;
 import org.hibernate.annotations.Cache;

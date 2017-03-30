@@ -15,12 +15,12 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.dynamos.test.customer;
+package io.dynamos.test.customer;
 
-import com.dynamos.DomainApplication;
-import com.dynamos.domain.entity.Customer;
-import com.dynamos.domain.service.CustomerService;
-import com.dynamos.test.util.GenerateData;
+import io.dynamos.DomainApplication;
+import io.dynamos.domain.entity.Customer;
+import io.dynamos.domain.service.CustomerService;
+import io.dynamos.test.util.GenerateData;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -48,7 +48,7 @@ public class CustomerTestCase {
     @Autowired
     private CustomerService customerService;
 
-    private  Customer customer;
+    private Customer customer;
 
     @Test
     public void testDelete() throws Exception {

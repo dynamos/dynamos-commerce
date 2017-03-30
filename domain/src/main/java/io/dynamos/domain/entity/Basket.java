@@ -1,6 +1,5 @@
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -18,7 +17,7 @@ import java.util.Set;
  * A Basket.
  */
 @Entity
-@Table(name = "rhino_basket")
+@Table(name = "dyn_basket")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Basket implements Serializable {
 
@@ -35,7 +34,6 @@ public class Basket implements Serializable {
     @Column(name = "amount", precision = 10, scale = 2, nullable = false)
     private BigDecimal amount;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "basket", cascade = CascadeType.ALL)
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<ItemBasket> items = new HashSet<>();

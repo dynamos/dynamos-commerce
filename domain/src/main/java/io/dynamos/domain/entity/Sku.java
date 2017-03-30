@@ -1,6 +1,5 @@
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -69,7 +68,6 @@ public class Sku implements Serializable {
     @JoinColumn(name = "custom_format_id")
     private TransportFormat transportFormat;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "product", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<ProductAttribute> attributes = new HashSet<>();

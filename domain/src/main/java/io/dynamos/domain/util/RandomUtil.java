@@ -1,4 +1,4 @@
-package com.dynamos.domain.util;
+package io.dynamos.domain.util;
 
 
 import org.apache.commons.lang3.RandomStringUtils;

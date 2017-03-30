@@ -1,4 +1,4 @@
-package com.dynamos.domain.service;
+package io.dynamos.domain.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;

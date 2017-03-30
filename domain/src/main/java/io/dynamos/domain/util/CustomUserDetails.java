@@ -1,4 +1,4 @@
-package com.dynamos.domain.util;
+package io.dynamos.domain.util;
 
 
 import org.springframework.security.core.GrantedAuthority;

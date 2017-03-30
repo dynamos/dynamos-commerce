@@ -1,4 +1,4 @@
-package com.dynamos.infra.logging;
+package io.dynamos.infra.logging;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

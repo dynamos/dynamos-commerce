@@ -1,4 +1,4 @@
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;

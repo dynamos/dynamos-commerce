@@ -14,12 +14,12 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.dynamos.test.util;
+package io.dynamos.test.util;
 
-import com.dynamos.domain.entity.*;
-import com.dynamos.domain.repository.*;
-import com.dynamos.domain.service.ProductService;
-import com.dynamos.domain.util.RandomUtil;
+import io.dynamos.domain.entity.*;
+import io.dynamos.domain.repository.*;
+import io.dynamos.domain.service.ProductService;
+import io.dynamos.domain.util.RandomUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;

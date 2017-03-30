@@ -1,6 +1,6 @@
-package com.dynamos.domain.service;
+package io.dynamos.domain.service;
 
-import com.dynamos.domain.entity.User;
+import io.dynamos.domain.entity.User;
 import org.apache.commons.lang3.CharEncoding;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

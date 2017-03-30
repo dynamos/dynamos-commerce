@@ -11,8 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="control-panel" target="1.5" />
-      <module name="domain" target="1.5" />
+      <module name="control-panel" target="1.8" />
+      <module name="domain" target="1.8" />
       <module name="dynamos-commerce" target="1.5" />
     </bytecodeTargetLevel>
   </component>

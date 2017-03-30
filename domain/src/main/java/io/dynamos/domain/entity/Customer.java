@@ -15,9 +15,8 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.Email;
 
@@ -48,7 +47,6 @@ public class Customer  implements Serializable {
     @Column(length = 50, unique = true, nullable = false)
     private String login;
 
-    @JsonIgnore
     @NotNull
     @Size(min = 60, max = 60)
     @Column(length = 60)
@@ -76,7 +74,6 @@ public class Customer  implements Serializable {
 
     @Size(max = 20)
     @Column(name = "activation_key", length = 20)
-    @JsonIgnore
     private String activationKey;
 
     @Size(max = 20)
@@ -113,11 +110,9 @@ public class Customer  implements Serializable {
     @Column(name = "smartphone_number", length = 11, unique = true)
     private String smartphoneNumber;
 
-    @JsonIgnore
     @OneToOne(orphanRemoval = true, cascade = CascadeType.ALL)
     private Basket basket;
 
-    @JsonIgnore
     @ManyToMany
     @JoinTable(
                 name = "rhino_customer_authority",
@@ -126,7 +121,6 @@ public class Customer  implements Serializable {
     @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Authority> authorities = new HashSet<>();
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "customer")
     @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<PersistentToken> persistentTokens = new HashSet<>();

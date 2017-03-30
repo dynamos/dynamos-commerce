@@ -1,7 +1,7 @@
-package com.dynamos.domain.service;
+package io.dynamos.domain.service;
 
-import com.dynamos.domain.entity.Basket;
-import com.dynamos.domain.repository.BasketRepository;
+import io.dynamos.domain.entity.Basket;
+import io.dynamos.domain.repository.BasketRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

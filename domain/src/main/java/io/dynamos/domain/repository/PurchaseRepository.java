@@ -1,6 +1,6 @@
-package com.dynamos.domain.repository;
+package io.dynamos.domain.repository;
 
-import com.dynamos.domain.entity.Purchase;
+import io.dynamos.domain.entity.Purchase;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

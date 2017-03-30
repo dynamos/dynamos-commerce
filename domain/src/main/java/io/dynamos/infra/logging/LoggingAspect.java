@@ -1,4 +1,4 @@
-package com.dynamos.infra.logging;
+package io.dynamos.infra.logging;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;

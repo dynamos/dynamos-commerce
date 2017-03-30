@@ -1,10 +1,10 @@
-package com.dynamos.test.basket;
+package io.dynamos.test.basket;
 
-import com.dynamos.DomainApplication;
-import com.dynamos.domain.entity.Basket;
-import com.dynamos.domain.entity.ItemBasket;
-import com.dynamos.domain.service.BasketService;
-import com.dynamos.test.util.GenerateData;
+import io.dynamos.DomainApplication;
+import io.dynamos.domain.entity.Basket;
+import io.dynamos.domain.entity.ItemBasket;
+import io.dynamos.domain.service.BasketService;
+import io.dynamos.test.util.GenerateData;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

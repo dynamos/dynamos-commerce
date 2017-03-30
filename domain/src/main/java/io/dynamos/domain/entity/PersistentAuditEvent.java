@@ -1,4 +1,4 @@
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

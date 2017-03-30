@@ -1,12 +1,12 @@
-package com.dynamos.domain.service;
+package io.dynamos.domain.service;
 
-import com.dynamos.domain.entity.Authority;
-import com.dynamos.domain.entity.User;
-import com.dynamos.domain.repository.AuthorityRepository;
-import com.dynamos.domain.repository.PersistentTokenRepository;
-import com.dynamos.domain.repository.UserRepository;
-import com.dynamos.domain.util.RandomUtil;
-import com.dynamos.domain.util.SecurityUtils;
+import io.dynamos.domain.entity.Authority;
+import io.dynamos.domain.entity.User;
+import io.dynamos.domain.repository.AuthorityRepository;
+import io.dynamos.domain.repository.PersistentTokenRepository;
+import io.dynamos.domain.repository.UserRepository;
+import io.dynamos.domain.util.RandomUtil;
+import io.dynamos.domain.util.SecurityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -111,7 +111,7 @@ public class UserService {
     }
 
     public void updateUserInformation(String email) {
-        userRepository.findOneByLogin(SecurityUtils.getCurrentUserLogin()).ifPresent(u -> {
+        userRepository.findOneWithAuthoritiesById(SecurityUtils.getCurrentUserLogin()).ifPresent(u -> {
             u.setEmail(email);
             userRepository.save(u);
             log.debug("Changed Information for User: {}", u);
@@ -119,7 +119,7 @@ public class UserService {
     }
 
     public void changePassword(String password) {
-        userRepository.findOneByLogin(SecurityUtils.getCurrentUserLogin()).ifPresent(u -> {
+        userRepository.findOneWithAuthoritiesById(SecurityUtils.getCurrentUserLogin()).ifPresent(u -> {
             String encryptedPassword = passwordEncoder.encode(password);
             u.setPassword(encryptedPassword);
             userRepository.save(u);
@@ -129,7 +129,7 @@ public class UserService {
 
     @Transactional(readOnly = true)
     public Optional<User> getUserWithAuthoritiesByLogin(String login) {
-        return userRepository.findOneByLogin(login).map(u -> {
+        return userRepository.findOneWithAuthoritiesById(login).map(u -> {
             u.getAuthorities().size();
             return u;
         });
@@ -144,9 +144,7 @@ public class UserService {
 
     @Transactional(readOnly = true)
     public User getUserWithAuthorities() {
-        User user = userRepository.findOneByLogin(SecurityUtils.getCurrentUserLogin()).get();
-        user.getAuthorities().size(); // eagerly load the association
-        return user;
+        return userRepository.findOneWithAuthoritiesByLogin(SecurityUtils.getCurrentUserLogin()).get();
     }
 
     /**

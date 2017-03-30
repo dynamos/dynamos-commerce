@@ -15,9 +15,8 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.validator.constraints.Email;
@@ -50,7 +49,6 @@ public class User implements Serializable {
     @Column(length = 50, unique = true, nullable = false)
     private String login;
 
-    @JsonIgnore
     @NotEmpty(message = "{system.validation.not_null}")
     @Size(min = 60, max = 60)
     @Column(length = 60)
@@ -78,7 +76,6 @@ public class User implements Serializable {
 
     @Size(max = 20)
     @Column(name = "activation_key", length = 20)
-    @JsonIgnore
     private String activationKey;
 
     @Size(max = 20)
@@ -94,7 +91,6 @@ public class User implements Serializable {
     @Column(name = "created_date")
     private LocalDateTime createdDate;
 
-    @JsonIgnore
     @ManyToMany
     @JoinTable(
             name = "dyn_user_authority",
@@ -103,7 +99,6 @@ public class User implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<Authority> authorities = new HashSet<>();
 
-    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, mappedBy = "user")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<PersistentToken> persistentTokens = new HashSet<>();

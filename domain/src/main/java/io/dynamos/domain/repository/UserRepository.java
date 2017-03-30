@@ -1,6 +1,7 @@
-package com.dynamos.domain.repository;
+package io.dynamos.domain.repository;
 
-import com.dynamos.domain.entity.User;
+import io.dynamos.domain.entity.User;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.ZonedDateTime;
@@ -21,7 +22,11 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     Optional<User> findOneByEmail(String email);
 
-    Optional<User> findOneByLogin(String login);
+    @EntityGraph(attributePaths = "authorities")
+    Optional<User> findOneWithAuthoritiesById(String login);
+
+    @EntityGraph(attributePaths = "authorities")
+    Optional<User> findOneWithAuthoritiesByLogin(String login);
 
     @Override
     void delete(User t);

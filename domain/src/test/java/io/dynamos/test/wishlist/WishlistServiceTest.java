@@ -15,12 +15,12 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.dynamos.test.wishlist;
+package io.dynamos.test.wishlist;
 
-import com.dynamos.DomainApplication;
-import com.dynamos.domain.entity.Wishlist;
-import com.dynamos.domain.service.WishlistService;
-import com.dynamos.test.util.GenerateData;
+import io.dynamos.DomainApplication;
+import io.dynamos.domain.entity.Wishlist;
+import io.dynamos.domain.service.WishlistService;
+import io.dynamos.test.util.GenerateData;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

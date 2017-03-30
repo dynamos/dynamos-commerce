@@ -1,4 +1,4 @@
-package com.dynamos.domain.entity.enums;
+package io.dynamos.domain.entity.enums;
 
 /**
  * Created by adelm_000 on 14/01/2016.

@@ -1,6 +1,6 @@
-package com.dynamos.domain.repository;
+package io.dynamos.domain.repository;
 
-import com.dynamos.domain.entity.TransportFormat;
+import io.dynamos.domain.entity.TransportFormat;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

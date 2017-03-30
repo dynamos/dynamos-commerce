@@ -1,9 +1,9 @@
-package com.dynamos.domain.service;
+package io.dynamos.domain.service;
 
-import com.dynamos.domain.entity.User;
-import com.dynamos.domain.exception.UserNotActivatedException;
-import com.dynamos.domain.repository.UserRepository;
-import com.dynamos.domain.util.CustomUserDetails;
+import io.dynamos.domain.entity.User;
+import io.dynamos.domain.exception.UserNotActivatedException;
+import io.dynamos.domain.repository.UserRepository;
+import io.dynamos.domain.util.CustomUserDetails;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +35,7 @@ public class UserDetailService implements UserDetailsService {
     public UserDetails loadUserByUsername(final String login) {
         log.debug("Authenticating {}", login);
         String lowercaseLogin = login.toLowerCase();
-        Optional<User> userFromDatabase = userRepository.findOneByLogin(lowercaseLogin);
+        Optional<User> userFromDatabase = userRepository.findOneWithAuthoritiesByLogin(lowercaseLogin);
         return userFromDatabase.map(user -> {
             if (!user.getActivated()) {
                 throw new UserNotActivatedException("User " + lowercaseLogin + " was not activated");

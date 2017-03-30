@@ -15,10 +15,10 @@
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.dynamos.domain.service;
+package io.dynamos.domain.service;
 
-import com.dynamos.domain.entity.Wishlist;
-import com.dynamos.domain.repository.WishlistRepository;
+import io.dynamos.domain.entity.Wishlist;
+import io.dynamos.domain.repository.WishlistRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

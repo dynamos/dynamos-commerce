@@ -14,9 +14,9 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.dynamos.domain.repository;
+package io.dynamos.domain.repository;
 
-import com.dynamos.domain.entity.Customer;
+import io.dynamos.domain.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

@@ -1,4 +1,4 @@
-package com.dynamos.domain.util;
+package io.dynamos.domain.util;
 
 /**
  * Constants for Spring Security authorities.

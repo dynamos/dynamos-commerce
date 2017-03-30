@@ -1,4 +1,4 @@
-package com.dynamos.domain.service;
+package io.dynamos.domain.service;
 
 /**
  * Created by adelmo on 2/14/16.

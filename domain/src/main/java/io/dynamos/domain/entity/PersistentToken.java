@@ -1,7 +1,5 @@
-package com.dynamos.domain.entity;
+package io.dynamos.domain.entity;
 
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -24,16 +22,13 @@ public class PersistentToken implements Serializable {
     @Id
     private String series;
 
-    @JsonIgnore
     @NotNull
     @Column(name = "token_value", nullable = false)
     private String tokenValue;
 
-    @JsonIgnore
     @Column(name = "token_date")
     private LocalDate tokenDate;
 
-    //an IPV6 address max length is 39 characters
     @Size(min = 0, max = 39)
     @Column(name = "ip_address", length = 39)
     private String ipAddress;
@@ -41,11 +36,9 @@ public class PersistentToken implements Serializable {
     @Column(name = "user_agent")
     private String userAgent;
 
-    @JsonIgnore
     @ManyToOne
     private User user;
 
-    @JsonIgnore
     @ManyToOne
     private Customer customer;
 
@@ -73,7 +66,6 @@ public class PersistentToken implements Serializable {
         this.tokenDate = tokenDate;
     }
 
-    @JsonGetter
     public String getFormattedTokenDate() {
         return DATE_TIME_FORMATTER.format(this.tokenDate);
     }

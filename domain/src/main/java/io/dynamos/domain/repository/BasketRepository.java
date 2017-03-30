@@ -1,6 +1,6 @@
-package com.dynamos.domain.repository;
+package io.dynamos.domain.repository;
 
-import com.dynamos.domain.entity.Basket;
+import io.dynamos.domain.entity.Basket;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
