@@ -115,7 +115,7 @@ public class Customer  implements Serializable {
 
     @ManyToMany
     @JoinTable(
-                name = "rhino_customer_authority",
+                name = "dyn_customer_authority",
                 joinColumns = {@JoinColumn(name = "user_id", referencedColumnName = "id")},
                 inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "name")})
     @org.hibernate.annotations.Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)

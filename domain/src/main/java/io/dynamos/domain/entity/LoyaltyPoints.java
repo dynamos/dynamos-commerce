@@ -14,7 +14,7 @@ import java.util.Objects;
  * A LoyaltyPoints.
  */
 @Entity
-@Table(name = "rhino_loyalty_points")
+@Table(name = "dyn_loyalty_points")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class LoyaltyPoints implements Serializable {
 

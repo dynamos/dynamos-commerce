@@ -12,7 +12,7 @@ import java.util.Objects;
  * A TransportFormat.
  */
 @Entity
-@Table(name = "dynamos_custom_format")
+@Table(name = "dyn_custom_format")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class TransportFormat implements Serializable {
 

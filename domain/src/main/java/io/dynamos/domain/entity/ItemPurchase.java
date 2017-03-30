@@ -13,7 +13,7 @@ import java.util.Objects;
  * A ItemPurchase.
  */
 @Entity
-@Table(name = "rhino_item_purchase")
+@Table(name = "dyn_item_purchase")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class ItemPurchase implements Serializable {
 

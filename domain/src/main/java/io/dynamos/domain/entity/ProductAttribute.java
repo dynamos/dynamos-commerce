@@ -12,7 +12,7 @@ import java.util.Objects;
  * A ProductAttribute.
  */
 @Entity
-@Table(name = "rhino_sku_attribute")
+@Table(name = "dyn_sku_attribute")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class ProductAttribute implements Serializable {
 

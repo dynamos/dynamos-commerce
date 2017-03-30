@@ -14,7 +14,7 @@ import java.util.Set;
  * A Wishlist.
  */
 @Entity
-@Table(name = "rhino_wishlist")
+@Table(name = "dyn_wishlist")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Wishlist implements Serializable {
 
@@ -35,7 +35,7 @@ public class Wishlist implements Serializable {
 
     @ManyToMany
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    @JoinTable(name = "wishlist_products",
+    @JoinTable(name = "dyn_wishlist_products",
             joinColumns = @JoinColumn(name = "wishlist_id", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name = "product_id", referencedColumnName = "ID"))
     private Set<Product> products = new HashSet<>();

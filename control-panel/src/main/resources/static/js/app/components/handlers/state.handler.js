@@ -33,7 +33,7 @@
             var stateChangeSuccess = $rootScope.$on('$stateChangeSuccess',  function(event, toState, toParams, fromState, fromParams) {
                 var titleKey = 'Dynamos Admin' ;
 
-                if (toState.data !== null && toState.data.pageTitle) {
+                if (toState.data !== null && angular.isDefined(toState.data) && angular.isDefined(toState.data.pageTitle) ){
                     titleKey = toState.data.pageTitle;
                 }
                 $window.document.title =  $window.document.title.length > 0 ? $window.document.title + ' - ' + titleKey : titleKey;
