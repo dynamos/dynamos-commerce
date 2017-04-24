@@ -9,12 +9,48 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
     <link rel="stylesheet" href="webjars/adminlte/2.3.11/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="webjars/adminlte/2.3.11/dist/css/skins/_all-skins.min.css">
-
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-green-light" ng-app="dynamos-panel">
 
+<div class="wrapper">
+    <header class="main-header" ui-view="header"></header>
+
+    <aside class="main-sidebar" ui-view="sidebar"></aside>
+
+    <div class="content-wrapper">
+        <div ui-view="content"></div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.3.8
+        </div>
+        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+        reserved.
+    </footer>
+</div>
 
 </body>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="webjars/adminlte/2.3.11/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="webjars/adminlte/2.3.11/plugins/fastclick/fastclick.min.js"></script>
+<script src="webjars/adminlte/2.3.11/dist/js/app.min.js"></script>
+
+<script src="webjars/angularjs/1.6.2/angular.min.js"></script>
+<script src="webjars/angularjs/1.6.2/angular-resource.min.js"></script>
+<script src="webjars/angularjs/1.6.2/angular-animate.min.js"></script>
+<script src="lib/angular-cache-buster.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/app.config.js"></script>
+
 </html>

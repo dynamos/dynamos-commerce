@@ -15,6 +15,9 @@ public class Product {
     private String identifier;
 
     @NotNull
+    private String title;
+
+    @NotNull
     private String manufacturer;
 
     @NotNull
@@ -73,5 +76,13 @@ public class Product {
 
     public void setImages(List<String> images) {
         this.images = images;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
