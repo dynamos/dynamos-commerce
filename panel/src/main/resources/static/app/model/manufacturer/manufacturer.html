@@ -1,0 +1,66 @@
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Manufacturer</h3>
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Name</label>
+                    <input type="text" class="uk-input" ng-model="vm.manufacturer.name">
+                </div>
+                <div class="col-md-8">
+                    <div class="pull-right voffset-button">
+                        <button class="btn btn-flat btn-default" ng-click="vm.loadAll()">List</button>
+                        <button class="btn btn-flat btn-primary" ui-sref="manufacturer-create">Create</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row voffset2" ng-if="vm.manufacturers.length > 0">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <caption>List of Manufacturers</caption>
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Telephone</th>
+                                <th>Address</th>
+                                <th>Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-repeat="manufacturer in vm.manufacturers">
+                                <td>{{manufacturer.name}}</td>
+                                <td>{{manufacturer.telephone}}</td>
+                                <td>{{manufacturer.address}}</td>
+                                <td>
+                                    <span class="uk-label" role="button" ui-sref="manufacturer-edit({id:manufacturer.id})"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span>
+                                    <span class="uk-label uk-label-danger" role="button"><i class="fa fa-times" aria-hidden="true"></i></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row voffset2" ng-if="vm.manufacturers.length == 0">
+                <div class="col-md-12">
+                    <div class="uk-placeholder uk-text-center">
+                        No manufacturer found
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.box -->
+
+</section>

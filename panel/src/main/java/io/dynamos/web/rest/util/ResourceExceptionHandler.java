@@ -14,6 +14,6 @@ public class ResourceExceptionHandler {
 
     @ExceptionHandler(BusinessRuleException.class)
     private ResponseEntity businessRuleException(BusinessRuleException e) {
-        return ResponseEntity.status(HttpStatus.BAD_REQUEST).headers(HeadersUtil.createAlert(e.getMessage())).build();
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).headers(HeadersUtil.createAlert(e.getMessage(), "error")).build();
     }
 }

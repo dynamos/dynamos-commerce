@@ -1,0 +1,39 @@
+.voffset1 {
+    margin-top: 10px !important;
+}
+
+.voffset2 {
+    margin-top: 20px !important;
+}
+
+.voffset3 {
+    margin-top: 30px !important;
+}
+
+.voffset-button {
+    margin-top: 24px !important;
+}
+
+ol{
+    margin-top: 0;
+}
+
+.breadcrumb {
+    padding: .75rem 1rem;
+    list-style: none;
+    background-color: #fff;
+    position: relative;
+    border-bottom: 1px solid #cfd8dc;
+    border-radius: 0;
+}
+
+.breadcrumb {
+    margin-bottom: 20px;
+}
+
+.breadcrumb > li > a {
+    color: #444;
+    text-decoration: none;
+    display: inline-block;
+}
+

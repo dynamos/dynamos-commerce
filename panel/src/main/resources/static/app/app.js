@@ -6,4 +6,6 @@ angular.module('dynamos-panel', [
     'ui.bootstrap',
     'ngCacheBuster',
     'ngResource',
-    'ngAnimate']);
+    'ngAnimate',
+    'MessageCenterModule',
+    'ncy-angular-breadcrumb']);

@@ -6,51 +6,63 @@
     <title>Dynamos | Dashboard</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
 
-    <link rel="stylesheet" href="webjars/adminlte/2.3.11/dist/css/AdminLTE.min.css">
-    <link rel="stylesheet" href="webjars/adminlte/2.3.11/dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="hold-transition skin-green-light" ng-app="dynamos-panel">
+<body class="app header-fixed sidebar-fixed" ng-app="dynamos-panel">
 
-<div class="wrapper">
-    <header class="main-header" ui-view="header"></header>
+<div ng-include="'views/navbar.html'"></div>
 
-    <aside class="main-sidebar" ui-view="sidebar"></aside>
+<div class="app-body">
 
-    <div class="content-wrapper">
-        <div ui-view="content"></div>
-    </div>
+    <div ng-include="'views/sidebar.html'"></div>
 
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.8
-        </div>
-        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-        reserved.
-    </footer>
+    <main class="main">
+        <ol class="breadcrumb" breadcrumb>
+            <ncy-breadcrumb></ncy-breadcrumb>
+        </ol>
+
+        <mc-messages></mc-messages>
+
+        <div class="container-fluid uk-scope" ui-view="content"></div>
+    </main>
 </div>
+
+<footer class="app-footer">
+    <a href="http://coreui.io">CoreUI</a> &copy; 2017 creativeLabs.
+    <span class="float-right">Powered by <a href="http://coreui.io">CoreUI</a>
+    </span>
+</footer>
+
 
 </body>
 
 <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script src="webjars/adminlte/2.3.11/plugins/slimScroll/jquery.slimscroll.min.js"></script>
-<script src="webjars/adminlte/2.3.11/plugins/fastclick/fastclick.min.js"></script>
-<script src="webjars/adminlte/2.3.11/dist/js/app.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.22/js/uikit.min.js"></script>
 
 <script src="webjars/angularjs/1.6.2/angular.min.js"></script>
 <script src="webjars/angularjs/1.6.2/angular-resource.min.js"></script>
 <script src="webjars/angularjs/1.6.2/angular-animate.min.js"></script>
-<script src="lib/angular-cache-buster.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+<script src="lib/angular-cache-buster.js"></script>
+<script src="lib/angular-ui-router.min.js"></script>
+<script src="lib/ui-bootstrap-tpls.min.js"></script>
+<script src="lib/message-center.js"></script>
+<script src="lib/angular-breadcrumb.min.js"></script>
 
 <script src="app/app.js"></script>
 <script src="app/app.config.js"></script>
+<script src="app/directive/template.directives.js"></script>
+<script src="app/blocks/interceptor/notification.interceptor.js"></script>
+<script src="app/blocks/config/uib-pagination.config.js"></script>
+<script src="app/model/manufacturer/manufacturer.state.js"></script>
+<script src="app/model/manufacturer/manufacturer.service.js"></script>
+<script src="app/model/manufacturer/manufacturer.controller.js"></script>
+<script src="app/model/manufacturer/manufacturer-create.controller.js"></script>
+<script src="app/model/manufacturer/manufacturer-edit.controller.js"></script>
 
 </html>
