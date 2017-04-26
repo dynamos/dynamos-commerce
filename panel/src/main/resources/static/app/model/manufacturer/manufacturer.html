@@ -20,7 +20,7 @@
                 <div class="row voffset2" ng-if="vm.manufacturers.length > 0">
                     <div class="col-md-12">
                         <div class="table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered table-striped table-condensed">
                                 <thead>
                                 <tr>
                                     <th>Name</th>
@@ -43,6 +43,7 @@
                                 </tr>
                                 </tbody>
                             </table>
+                            <ul uib-pagination total-items="vm.totalItems" ng-model="vm.currentPage" ng-change="vm.loadAll()"></ul>
                         </div>
                     </div>
                 </div>

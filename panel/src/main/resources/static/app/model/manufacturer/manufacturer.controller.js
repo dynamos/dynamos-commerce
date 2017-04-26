@@ -15,9 +15,16 @@
         vm.manufacturer = {};
 
         function loadAll() {
-            Manufacturer.query(function (result) {
+            Manufacturer.query({
+                page: vm.currentPage - 1,
+                name: vm.manufacturer.name
+            }, onSuccess);
+
+            function onSuccess(result) {
                 vm.manufacturers = result.content;
-            });
+                vm.totalItems = result.totalElements;
+                vm.currentPage = result.number + 1;
+            }
         }
 
         loadAll();

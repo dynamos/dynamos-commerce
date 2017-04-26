@@ -7,5 +7,5 @@ public final class RestConstants {
 
     private RestConstants(){}
 
-    public static final int MAX_PAGE_ITENS = 15;
+    public static final int MAX_PAGE_ITENS = 5;
 }

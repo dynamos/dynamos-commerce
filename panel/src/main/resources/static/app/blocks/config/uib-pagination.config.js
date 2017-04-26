@@ -11,7 +11,7 @@
     paginationConfig.$inject = ['uibPaginationConfig'];
 
     function paginationConfig(uibPaginationConfig) {
-        uibPaginationConfig.itemsPerPage = 15;
+        uibPaginationConfig.itemsPerPage = 5;
         uibPaginationConfig.maxSize = 5;
         uibPaginationConfig.boundaryLinks = true;
         uibPaginationConfig.firstText = '«';
