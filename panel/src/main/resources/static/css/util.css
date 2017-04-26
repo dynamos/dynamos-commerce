@@ -14,26 +14,4 @@
     margin-top: 24px !important;
 }
 
-ol{
-    margin-top: 0;
-}
-
-.breadcrumb {
-    padding: .75rem 1rem;
-    list-style: none;
-    background-color: #fff;
-    position: relative;
-    border-bottom: 1px solid #cfd8dc;
-    border-radius: 0;
-}
-
-.breadcrumb {
-    margin-bottom: 20px;
-}
-
-.breadcrumb > li > a {
-    color: #444;
-    text-decoration: none;
-    display: inline-block;
-}
 

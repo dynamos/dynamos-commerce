@@ -1,0 +1,193 @@
+td,
+th {
+    padding: 0;
+}
+
+.table {
+    border-radius: 2px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #f0f1f4;
+}
+
+.table th, .table td {
+    border-top: none;
+}
+
+.table > thead > tr > th,
+.table > tfoot > tr > th {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    vertical-align: bottom;
+    border-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+    background-color: #d8dce3;
+    color: #3b4354;
+    font-size: 12px;
+}
+
+.table > thead > tr:first-child {
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.table > thead > tr:first-child > th:first-child {
+    border-top-left-radius: 2px;
+}
+
+.table > thead > tr:first-child > th:last-child {
+    border-top-right-radius: 2px;
+}
+
+.table > tfoot > tr:last-child {
+    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.table > tfoot > tr:last-child > th:first-child {
+    border-bottom-left-radius: 2px;
+}
+
+.table > tfoot > tr:last-child > th:last-child {
+    border-bottom-right-radius: 2px;
+}
+
+.table > tbody > tr:last-child > th:first-child,
+.table > tbody > tr:last-child > td:first-child {
+    border-bottom-left-radius: 2px;
+}
+
+.table > tbody > tr:last-child > th:last-child,
+.table > tbody > tr:last-child > td:last-child {
+    border-bottom-right-radius: 2px;
+}
+
+.table > tfoot + tbody > tr:last-child > th:first-child,
+.table > tfoot + tbody > tr:last-child > td:first-child {
+    border-bottom-left-radius: 0;
+}
+
+.table > tfoot + tbody > tr:last-child > th:last-child,
+.table > tfoot + tbody > tr:last-child > td:last-child {
+    border-bottom-right-radius: 0;
+}
+
+.table > thead > tr > th .ckbox,
+.table > tbody > tr > th .ckbox,
+.table > tfoot > tr > th .ckbox,
+.table > thead > tr > td .ckbox,
+.table > tbody > tr > td .ckbox,
+.table > tfoot > tr > td .ckbox {
+    margin: 0;
+    display: inline-block;
+}
+
+.table > thead > tr > th .ckbox span:before,
+.table > tbody > tr > th .ckbox span:before,
+.table > tfoot > tr > th .ckbox span:before,
+.table > thead > tr > td .ckbox span:before,
+.table > tbody > tr > td .ckbox span:before,
+.table > tfoot > tr > td .ckbox span:before {
+    border-color: transparent;
+}
+
+.table > thead > tr > th .ckbox input,
+.table > tbody > tr > th .ckbox input,
+.table > tfoot > tr > th .ckbox input,
+.table > thead > tr > td .ckbox input,
+.table > tbody > tr > td .ckbox input,
+.table > tfoot > tr > td .ckbox input {
+    margin-right: 0;
+}
+
+.table > thead > tr > th .ckbox input:checked + span:before,
+.table > tbody > tr > th .ckbox input:checked + span:before,
+.table > tfoot > tr > th .ckbox input:checked + span:before,
+.table > thead > tr > td .ckbox input:checked + span:before,
+.table > tbody > tr > td .ckbox input:checked + span:before,
+.table > tfoot > tr > td .ckbox input:checked + span:before {
+    border-color: transparent;
+}
+
+.table > thead > tr > th .ckbox input:checked + span:after,
+.table > tbody > tr > th .ckbox input:checked + span:after,
+.table > tfoot > tr > th .ckbox input:checked + span:after,
+.table > thead > tr > td .ckbox input:checked + span:after,
+.table > tbody > tr > td .ckbox input:checked + span:after,
+.table > tfoot > tr > td .ckbox input:checked + span:after {
+    display: block;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 10px 15px;
+    line-height: 1.42857143;
+    vertical-align: top;
+}
+
+/** TABLE BORDERED **/
+.table-bordered {
+    border: 1px solid #ffffff;
+}
+
+.table-bordered {
+    border: 0;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > tbody > tr > th,
+.table-bordered > tfoot > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > td {
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.table-bordered > thead > tr > th:first-child,
+.table-bordered > tbody > tr > th:first-child,
+.table-bordered > tfoot > tr > th:first-child,
+.table-bordered > thead > tr > td:first-child,
+.table-bordered > tbody > tr > td:first-child,
+.table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+}
+
+.table-bordered > thead > tr:first-child > th {
+    border-top: 0;
+}
+
+.table-bordered > thead > tr > th:first-child, .table-bordered > tbody > tr > th:first-child, .table-bordered > tfoot > tr > th:first-child, .table-bordered > thead > tr > td:first-child, .table-bordered > tbody > tr > td:first-child, .table-bordered > tfoot > tr > td:first-child {
+    border-left: 0;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border-bottom: 0;
+    border-right: 0;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td {
+    border: 1px solid #ffffff;
+}
+
+/** END TABLE BORDERED **/
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+    background-color: #fcfcfd;
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: #e7e9ee;
+}
+
+.table-striped-col > thead > tr th:nth-of-type(even),
+.table-striped-col > tfoot > tr th:nth-of-type(even),
+.table-striped-col > thead > tr td:nth-of-type(even),
+.table-striped-col > tfoot > tr td:nth-of-type(even) {
+    background-color: #e4e7ec;
+}
+.table-striped-col > tbody > tr:not(.active):not(.success):not(.info):not(.warning):not(.danger) th:nth-of-type(even),
+.table-striped-col > tbody > tr:not(.active):not(.success):not(.info):not(.warning):not(.danger) td:nth-of-type(even) {
+    background-color: #f6f7f8;
+}

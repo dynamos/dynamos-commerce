@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                List of Products
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Name</label>
+                        <input type="text" class="form-control" ng-model="vm.product.name">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="pull-right voffset-button">
+                            <button class="btn btn-flat btn-default" ng-click="vm.loadAll()">List</button>
+                            <button class="btn btn-flat btn-primary" ui-sref="manufacturer-create">Create</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row voffset2" ng-if="vm.products.length > 0">
+                    <div class="col-md-12">
+                        <ul uib-pagination total-items="vm.totalItems" ng-model="vm.currentPage" ng-change="vm.loadAll()"></ul>
+                    </div>
+                </div>
+                <div class="row voffset2" ng-if="vm.manufacturers.length == 0">
+                    <div class="col-xs-4 col-lg-4">
+                        <div class="uk-placeholder uk-text-center">
+                            No manufacturer found
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
