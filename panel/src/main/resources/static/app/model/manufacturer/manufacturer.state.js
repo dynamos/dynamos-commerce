@@ -26,7 +26,7 @@
 
         $stateProvider.state('manufacturer-create', {
             parent: 'manufacturer',
-            url: '/manufacturer/create',
+            url: '/create',
             ncyBreadcrumb: {
                 label: 'Create Manufacturer'
             },
@@ -41,7 +41,7 @@
 
         $stateProvider.state('manufacturer-edit', {
             parent: 'manufacturer',
-            url: '/manufacturer/{id}/edit',
+            url: '/{id}/edit',
             ncyBreadcrumb: {
                 label: 'Edit Manufacturer'
             },

@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="dynamos-panel">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Dynamos | Dashboard</title>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="app header-fixed sidebar-fixed" ng-app="dynamos-panel">
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
 
 <div ng-include="'views/navbar.html'"></div>
 
@@ -23,9 +26,7 @@
         <ol class="breadcrumb" breadcrumb>
             <ncy-breadcrumb></ncy-breadcrumb>
         </ol>
-
         <mc-messages></mc-messages>
-
         <div class="container-fluid" ui-view="content"></div>
     </main>
 </div>
