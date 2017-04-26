@@ -35,9 +35,9 @@ public class ManufacturerResource {
         return ResponseEntity.ok().headers(HeadersUtil.successAlert()).body(manufacturerService.save(manufacturer));
     }
 
-    @DeleteMapping
-    public ResponseEntity delete(@RequestBody Manufacturer manufacturer) throws BusinessRuleException {
-        manufacturerService.delete(manufacturer);
+    @DeleteMapping("{id}")
+    public ResponseEntity delete(@PathVariable String id) throws BusinessRuleException {
+        manufacturerService.delete(id);
         return ResponseEntity.ok().headers(HeadersUtil.successAlert()).build();
     }
 

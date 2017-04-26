@@ -23,7 +23,8 @@ public class ManufacturerService {
         return manufacturerRepository.save(manufacturer);
     }
 
-    public void delete(Manufacturer manufacturer) throws BusinessRuleException {
+    public void delete(String id) throws BusinessRuleException {
+        Manufacturer manufacturer = manufacturerRepository.findOne(id);
         beforeDelete(manufacturer);
 
         manufacturerRepository.delete(manufacturer);

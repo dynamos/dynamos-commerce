@@ -17,7 +17,7 @@
         function loadAll() {
             Product.query({
                 page: vm.currentPage - 1,
-                name: vm.manufacturer.name
+                name: vm.product.name
             }, onSuccess);
 
             function onSuccess(result) {

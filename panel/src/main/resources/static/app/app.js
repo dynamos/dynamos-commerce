@@ -4,7 +4,6 @@
 angular.module('dynamos-panel', [
     'ui.router',
     'ui.bootstrap',
-    'ngCacheBuster',
     'ngResource',
     'ngAnimate',
     'MessageCenterModule',

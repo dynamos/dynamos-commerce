@@ -2,18 +2,86 @@
 @import "buttons.css";
 @import "table.css";
 @import "components.css";
-
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,300italic,300);
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800);
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.42857143;
     color: #696c74;
     background-color: #d8dce3;
 }
 
 [role="button"] {
     cursor: pointer;
+}
+
+/** NAVBAR **/
+.app-header.navbar{
+    background-color: #262b36;
+    border-bottom: 1px solid #262b36;
+}
+
+.app-header.navbar .navbar-brand{
+    border-bottom: 1px solid #262b36;
+    background: #262b36 none;
+    color: #ffffff;
+}
+
+.app-header .navbar-toggler {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-nav .nav-link, .navbar-nav .navbar .dropdown-toggle, .navbar .navbar-nav .dropdown-toggle {
+    color: #778395;
+}
+
+.navbar-nav .nav-link:focus, .navbar-nav .navbar .dropdown-toggle:focus, .navbar .navbar-nav .dropdown-toggle:focus, .navbar-nav .nav-link:hover, .navbar-nav .navbar .dropdown-toggle:hover, .navbar .navbar-nav .dropdown-toggle:hover {
+    color: #9fa8bc;
+}
+
+.navbar-nav .open > .nav-link, .navbar-nav .navbar .open > .dropdown-toggle, .navbar .navbar-nav .open > .dropdown-toggle, .navbar-nav .open > .nav-link:focus, .navbar-nav .navbar .open > .dropdown-toggle:focus, .navbar .navbar-nav .open > .dropdown-toggle:focus, .navbar-nav .open > .nav-link:hover, .navbar-nav .navbar .open > .dropdown-toggle:hover, .navbar .navbar-nav .open > .dropdown-toggle:hover, .navbar-nav .active > .nav-link, .navbar-nav .navbar .active > .dropdown-toggle, .navbar .navbar-nav .active > .dropdown-toggle, .navbar-nav .active > .nav-link:focus, .navbar-nav .navbar .active > .dropdown-toggle:focus, .navbar .navbar-nav .active > .dropdown-toggle:focus, .navbar-nav .active > .nav-link:hover, .navbar-nav .navbar .active > .dropdown-toggle:hover, .navbar .navbar-nav .active > .dropdown-toggle:hover, .navbar-nav .nav-link.open, .navbar-nav .navbar .open.dropdown-toggle, .navbar .navbar-nav .open.dropdown-toggle, .navbar-nav .nav-link.open:focus, .navbar-nav .navbar .open.dropdown-toggle:focus, .navbar .navbar-nav .open.dropdown-toggle:focus, .navbar-nav .nav-link.open:hover, .navbar-nav .navbar .open.dropdown-toggle:hover, .navbar .navbar-nav .open.dropdown-toggle:hover, .navbar-nav .nav-link.active, .navbar-nav .navbar .active.dropdown-toggle, .navbar .navbar-nav .active.dropdown-toggle, .navbar-nav .nav-link.active:focus, .navbar-nav .navbar .active.dropdown-toggle:focus, .navbar .navbar-nav .active.dropdown-toggle:focus, .navbar-nav .nav-link.active:hover, .navbar-nav .navbar .active.dropdown-toggle:hover, .navbar .navbar-nav .active.dropdown-toggle:hover {
+    color: #9fa8bc;
+}
+
+
+/** SIDEBAR **/
+.sidebar {
+    color: inherit;
+    background: #fff;
+}
+
+.sidebar .nav .nav-item .nav-link, .sidebar .nav .nav-item .navbar .dropdown-toggle, .navbar .sidebar .nav .nav-item .dropdown-toggle {
+    color: #505b72;
+    padding: 12px 14px;
+    border-radius: 0;
+    font-weight: 700;
+    -webkit-transition: all 0.2s ease-out 0s;
+    -o-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+    border-bottom: 1px solid #eaecf0;
+    border-right: 1px solid #eaecf0;
+}
+
+.sidebar .nav .nav-item .nav-link i, .sidebar .nav .nav-item .navbar .dropdown-toggle i, .navbar .sidebar .nav .nav-item .dropdown-toggle i {
+    width: 20px;
+    margin: 0 0.5rem 0 0;
+    font-size: 14px;
+    color: #505b72;
+    text-align: center;
+}
+
+.sidebar .nav .nav-item .nav-link.active i, .sidebar .nav .nav-item .navbar .active.dropdown-toggle i, .navbar .sidebar .nav .nav-item .active.dropdown-toggle i {
+    color: #fff;
+}
+
+.sidebar .nav .nav-item .nav-link.active, .sidebar .nav .nav-item .navbar .active.dropdown-toggle, .navbar .sidebar .nav .nav-item .active.dropdown-toggle {
+    background: #2574ab;
+}
+
+.sidebar .nav .nav-item .nav-link:hover, .sidebar .nav .nav-item .navbar .dropdown-toggle:hover, .navbar .sidebar .nav .nav-item .dropdown-toggle:hover {
+    color: #262b36 !important;
+    background-color: #ffffff !important;
+}
+
+.sidebar .nav .nav-item .nav-link:hover i, .sidebar .nav .nav-item .navbar .dropdown-toggle:hover i, .navbar .sidebar .nav .nav-item .dropdown-toggle:hover i {
+    color: #262b36 !important;
 }

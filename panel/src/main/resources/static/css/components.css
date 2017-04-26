@@ -35,7 +35,6 @@
 
 /***** BADGES & LABELS *****/
 .badge {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
     min-width: 10px;
     padding: 3px 7px;
@@ -137,12 +136,12 @@ a.label:focus {
 }
 
 .label-success {
-    background-color: #259dab;
+    background-color: #4dbd74;
 }
 
 .label-success[href]:hover,
 .label-success[href]:focus {
-    background-color: #1c7781;
+    background-color: #3a9d5d;
 }
 
 .label-info {
@@ -246,7 +245,6 @@ a.label:focus {
 }
 
 /***** PANELS *****/
-
 .panel {
     border: 0;
     border-radius: 2px;
@@ -339,7 +337,7 @@ a.label:focus {
 .panel-info .panel-heading,
 .panel-inverse .panel-heading {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
     border-bottom: 0;
 }
 
@@ -735,6 +733,26 @@ a.label:focus {
     border-color: #5f6b87;
 }
 
+.panel-success {
+    border-color: #1c7781;
+}
+
+.panel-success > .panel-heading {
+    color: #1aa71c;
+    background-color: #259dab;
+    border-color: #1c7781;
+}
+
+.panel-primary {
+    border-color: #2574ab;
+}
+
+.panel-primary > .panel-heading {
+    color: #ffffff;
+    background-color: #2574ab;
+    border-color: #2574ab;
+}
+
 /***** ALERTS *****/
 .alert {
     padding: 15px;
@@ -805,4 +823,12 @@ a.label:focus {
 .alert-danger .alert-link:hover,
 .alert-danger .alert-link:focus {
     color: #ebebeb;
+}
+
+/** PLACEHOLDER **/
+.placeholder {
+    margin-bottom: 20px;
+    padding: 30px 30px;
+    background: transparent;
+    border: 1px dashed #e5e5e5;
 }

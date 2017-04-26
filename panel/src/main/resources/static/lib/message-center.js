@@ -103,7 +103,7 @@ directive('mcMessages', ['$rootScope', 'messageCenterService', function ($rootSc
     /*jshint multistr: true */
     var templateString = '\
     <div id="mc-messages-wrapper">\
-      <div class="alert alert-{{ message.type }} {{ animation }}" role="alert" ng-repeat="message in mcMessages">\
+      <div class="alert alert-{{ message.type }}" role="alert" ng-repeat="message in mcMessages">\
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\
         <span ng-switch on="message.html">\
           <span ng-switch-when="true">\
@@ -133,7 +133,6 @@ directive('mcMessages', ['$rootScope', 'messageCenterService', function ($rootSc
             if (messageCenterService.offlistener === undefined) {
                 messageCenterService.offlistener = $rootScope.$on('$locationChangeSuccess', changeReaction);
             }
-            scope.animation = attrs.animation || 'fade show';
         }
     };
 }]);

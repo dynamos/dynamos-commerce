@@ -4,17 +4,17 @@
 (function () {
     'use strict';
 
-    angular.module('dynamos-panel').controller('CreateManufacturerController', controller);
+    angular.module('dynamos-panel').controller('CreateProductController', controller);
 
-    controller.$inject = ['Manufacturer'];
+    controller.$inject = ['Product'];
 
-    function controller(Manufacturer) {
+    function controller(Product) {
         var vm = this;
         vm.save = save;
-        vm.manufacturer = {};
+        vm.product = {};
 
         function save() {
-            Manufacturer.save(vm.manufacturer);
+            Product.save(vm.product);
         }
     }
 })();

@@ -6,13 +6,11 @@
 
     angular.module('dynamos-panel').config(config);
 
-    config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', 'httpRequestInterceptorCacheBusterProvider', '$breadcrumbProvider'];
+    config.$inject = ['$stateProvider', '$urlRouterProvider', '$httpProvider', '$breadcrumbProvider'];
 
-    function config($stateProvider, $urlRouterProvider, $httpProvider, httpRequestInterceptorCacheBusterProvider, $breadcrumbProvider) {
+    function config($stateProvider, $urlRouterProvider, $httpProvider, $breadcrumbProvider) {
         $httpProvider.defaults.xsrfCookieName = 'CSRF-TOKEN';
         $httpProvider.defaults.xsrfHeaderName = 'X-CSRF-TOKEN';
-
-        httpRequestInterceptorCacheBusterProvider.setMatchlist([/.*api.*/], true);
 
         $urlRouterProvider.otherwise('/dashboard');
 

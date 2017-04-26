@@ -1,27 +1,27 @@
-<div class="card">
-    <div class="card-header">
-        Create ew Manufacturer
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h4 class="panel-title">Create new Product</h4>
     </div>
-    <div class="card-block">
+    <div class="panel-body">
         <form name="manufacturerForm">
             <div class="row">
                 <div class="col-md-4">
-                    <label>Name</label>
-                    <input type="text" class="uk-input" ng-model="vm.manufacturer.name">
+                    <label>Description</label>
+                    <input type="text" class="form-control" ng-model="vm.product.name">
                 </div>
                 <div class="col-md-4">
                     <label>Telephone</label>
-                    <input type="text" class="uk-input" ng-model="vm.manufacturer.telephone">
+                    <input type="text" class="form-control" ng-model="vm.product.telephone">
                 </div>
                 <div class="col-md-4">
                     <label>Address</label>
-                    <input type="text" class="uk-input" ng-model="vm.manufacturer.address">
+                    <input type="text" class="form-control" ng-model="vm.product.address">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="pull-right voffset-button">
-                        <button class="btn btn-flat btn-default" ui-sref="manufacturer">Back</button>
+                        <button class="btn btn-flat btn-default" ui-sref="product">Back</button>
                         <button type="submit" class="btn btn-flat btn-success" ng-click="vm.save()">Save</button>
                     </div>
                 </div>

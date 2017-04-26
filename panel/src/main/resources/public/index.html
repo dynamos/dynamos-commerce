@@ -11,6 +11,8 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.css"/>
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -25,21 +27,27 @@
         <ol class="breadcrumb" breadcrumb>
             <ncy-breadcrumb></ncy-breadcrumb>
         </ol>
-        <mc-messages></mc-messages>
+        <div class="container-fluid">
+            <mc-messages></mc-messages>
+        </div>
         <div class="container-fluid" ui-view="content"></div>
     </main>
 </div>
 
+<!--
 <footer class="app-footer">
     <a href="http://coreui.io">CoreUI</a> &copy; 2017 creativeLabs.
     <span class="float-right">Powered by <a href="http://coreui.io">CoreUI</a>
     </span>
 </footer>
+-->
 
 
 </body>
 
 <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.22/js/uikit.min.js"></script>
@@ -65,11 +73,11 @@
 <script src="app/model/manufacturer/manufacturer-create.controller.js"></script>
 <script src="app/model/manufacturer/manufacturer-edit.controller.js"></script>
 
-<script src="app/model/manufacturer/product.state.js"></script>
-<script src="app/model/manufacturer/product.service.js"></script>
-<script src="app/model/manufacturer/product.controller.js"></script>
-<script src="app/model/manufacturer/product-create.controller.js"></script>
-<script src="app/model/manufacturer/product-edit.controller.js"></script>
+<script src="app/model/product/product.state.js"></script>
+<script src="app/model/product/product.service.js"></script>
+<script src="app/model/product/product.controller.js"></script>
+<script src="app/model/product/product-create.controller.js"></script>
+<script src="app/model/product/product-edit.controller.js"></script>
 
 
 </html>
