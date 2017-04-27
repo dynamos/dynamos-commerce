@@ -18,7 +18,13 @@ public class Product {
     private String title;
 
     @NotNull
+    private String description;
+
+    @NotNull
     private String manufacturer;
+
+    @NotNull
+    private String model;
 
     @NotNull
     private BigDecimal price;
@@ -84,5 +90,21 @@ public class Product {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 }
