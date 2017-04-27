@@ -32,6 +32,9 @@ public class Product {
     @NotNull
     private Long quantityOnStock;
 
+    @NotNull
+    private Boolean status;
+
     private List<Attribute> attributes;
 
     private List<String> images;
