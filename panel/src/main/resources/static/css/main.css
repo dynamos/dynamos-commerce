@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
 
-
 @import "util.css";
 @import "buttons.css";
 @import "table.css";
 @import "components.css";
 @import "box.css";
-
 
 
 html,
@@ -22,5 +20,3 @@ body {
     overflow-x: hidden;
     background-color: #f3f3f4;
 }
-
-
