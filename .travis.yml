@@ -1,3 +1,4 @@
 language: java
-sudo: false
-script: mvn clean 
+jdk:
+  - oraclejdk8
+script: mvn clean compile 
