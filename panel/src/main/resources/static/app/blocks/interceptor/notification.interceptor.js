@@ -29,7 +29,7 @@
 
             if (angular.isString(alert) && angular.isString(alertType)) {
                 messageCenterService.add(alertType, alert, {
-                    status: messageCenterService.status.shown,
+                    status: messageCenterService.status.permanent,
                     timeout: 6000
                 });
             } else {

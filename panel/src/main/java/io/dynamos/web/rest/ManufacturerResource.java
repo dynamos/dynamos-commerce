@@ -42,7 +42,7 @@ public class ManufacturerResource {
     }
 
     @GetMapping
-    public ResponseEntity list(@PageableDefault(sort = {"title"}, value = RestConstants.MAX_PAGE_ITENS) Pageable pageable) {
+    public ResponseEntity list(@PageableDefault(sort = {"name"}, value = RestConstants.MAX_PAGE_ITENS) Pageable pageable) {
         Page page = manufacturerRepository.findAll(pageable);
         return ResponseEntity.ok(page);
     }

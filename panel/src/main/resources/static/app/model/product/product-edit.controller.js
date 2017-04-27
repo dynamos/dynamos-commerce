@@ -4,22 +4,24 @@
 (function () {
     'use strict';
 
-    angular.module('dynamos-panel').controller('EditManufacturerController', controller);
+    angular.module('dynamos-panel').controller('EditProductController', controller);
 
-    controller.$inject = ['Manufacturer', '$stateParams'];
+    controller.$inject = ['Product', '$stateParams', '$state'];
 
-    function controller(Manufacturer, $stateParams) {
+    function controller(Product, $stateParams, $state) {
         var vm = this;
         vm.save = save;
 
-        Manufacturer.get({
+        Product.get({
             id: $stateParams.id
         }, function (result) {
-            vm.manufacturer = result;
+            vm.product = result;
         });
 
         function save() {
-            Manufacturer.save(vm.manufacturer);
+            Product.save(vm.product, function () {
+                $state.go('product');
+            });
         }
     }
 })();

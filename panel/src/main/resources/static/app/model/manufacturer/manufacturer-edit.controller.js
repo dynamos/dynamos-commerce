@@ -6,9 +6,9 @@
 
     angular.module('dynamos-panel').controller('EditManufacturerController', controller);
 
-    controller.$inject = ['Manufacturer', '$stateParams'];
+    controller.$inject = ['Manufacturer', '$stateParams', '$state'];
 
-    function controller(Manufacturer, $stateParams) {
+    function controller(Manufacturer, $stateParams, $state) {
         var vm = this;
         vm.save = save;
 
@@ -19,7 +19,9 @@
         });
 
         function save() {
-            Manufacturer.save(vm.manufacturer);
+            Manufacturer.save(vm.manufacturer, function(){
+                $state.go('manufacturer');
+            });
         }
     }
 })();
