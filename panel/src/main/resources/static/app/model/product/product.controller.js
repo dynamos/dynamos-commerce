@@ -11,8 +11,10 @@
     function controller(Product) {
         var vm = this;
         vm.loadAll = loadAll;
+        vm.showDescription = showDescription;
         vm.products = [];
         vm.product = {};
+        vm.showDesc = [];
 
         function loadAll() {
             Product.query({
@@ -25,6 +27,10 @@
                 vm.totalItems = result.totalElements;
                 vm.currentPage = result.number + 1;
             }
+        }
+
+        function showDescription(index) {
+            vm.showDesc[index] =  !vm.showDesc[index];
         }
 
         loadAll();

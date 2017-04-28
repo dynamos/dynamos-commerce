@@ -7,4 +7,5 @@ angular.module('dynamos-panel', [
     'ngResource',
     'ngAnimate',
     'MessageCenterModule',
-    'ncy-angular-breadcrumb']);
+    'ncy-angular-breadcrumb',
+    'summernote']);

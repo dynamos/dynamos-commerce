@@ -1,11 +1,13 @@
 .table-bordered {
     border: 1px solid #EBEBEB;
 }
+
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
     background-color: #F5F5F6;
     border-bottom-width: 1px;
 }
+
 .table-bordered > thead > tr > th,
 .table-bordered > tbody > tr > th,
 .table-bordered > tfoot > tr > th,
@@ -14,10 +16,12 @@
 .table-bordered > tfoot > tr > td {
     border: 1px solid #e7e7e7;
 }
+
 .table > thead > tr > th {
     border-bottom: 1px solid #DDDDDD;
     vertical-align: bottom;
 }
+
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
@@ -30,6 +34,10 @@
     vertical-align: top;
 }
 
-.table-striped>tbody>tr:nth-of-type(odd) {
+.table-striped > tbody > tr:nth-of-type(odd) {
     background-color: #f9f9f9;
+}
+
+.row-inner {
+    line-height: 1.08em !important;
 }
