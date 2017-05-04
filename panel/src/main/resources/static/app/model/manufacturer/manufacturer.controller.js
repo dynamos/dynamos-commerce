@@ -35,16 +35,14 @@
         function openConfirm(manufacturer) {
             swal({
                 title: "Are you sure?",
-                text: "You will not be able to recover this Manufacturer! " + manufacturer.name,
+                text: "You will not be able to recover this Manufacturer " + manufacturer.name + "!",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
                 confirmButtonText: 'Yes, delete it!'
             }).then(function () {
-                Manufacturer.delete(manufacturer, function () {
-                    loadAll();
-                });
+                Manufacturer.delete(manufacturer, loadAll);
             });
         }
         loadAll();

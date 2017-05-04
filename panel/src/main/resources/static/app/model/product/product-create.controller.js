@@ -6,15 +6,30 @@
 
     angular.module('dynamos-panel').controller('CreateProductController', controller);
 
-    controller.$inject = ['Product'];
+    controller.$inject = ['Product', '$uibModal'];
 
-    function controller(Product) {
+    function controller(Product, $uibModal) {
         var vm = this;
-        vm.save = save;
         vm.product = {};
+
+        vm.save = save;
+        vm.selectManufacturer = selectManufacturer;
 
         function save() {
             Product.save(vm.product);
+        }
+
+        function selectManufacturer() {
+            $uibModal.open({
+                templateUrl: 'app/model/manufacturer/manufacturer-modal.html',
+                controller: 'ManufacturerModal',
+                controllerAs: 'vm',
+                size: 'lg'
+            }).result.then(success);
+
+            function success(manufacturer) {
+                vm.product.manufacturer = manufacturer;
+            }
         }
     }
 })();
