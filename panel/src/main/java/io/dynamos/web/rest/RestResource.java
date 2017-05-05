@@ -2,7 +2,10 @@ package io.dynamos.web.rest;
 
 import io.dynamos.services.BusinessService;
 import io.dynamos.web.rest.util.HeadersUtil;
+import io.dynamos.web.rest.util.RestConstants;
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +20,7 @@ public abstract class RestResource<T> {
 
     private BusinessService businessService;
 
-    public RestResource(BusinessService<T> businessService) {
+    public RestResource(BusinessService businessService) {
         this.businessService = businessService;
     }
 
@@ -40,5 +43,10 @@ public abstract class RestResource<T> {
     @GetMapping("{id}")
     public ResponseEntity find(@PathVariable("id") String identifier) {
         return Optional.ofNullable(businessService.findOne(identifier)).map(ResponseEntity::ok).orElse(new ResponseEntity<>(HttpStatus.BAD_REQUEST));
+    }
+
+    @GetMapping
+    public ResponseEntity list(@PageableDefault(sort = {"name"}, value = RestConstants.MAX_PAGE_ITENS) Pageable pageable) {
+        return ResponseEntity.ok(businessService.findAll(pageable));
     }
 }

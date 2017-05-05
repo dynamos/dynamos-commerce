@@ -1,15 +1,21 @@
 package io.dynamos.services;
 
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
+import java.io.Serializable;
 
 /**
  * Created by adelmo.pereira on 05/05/2017.
  */
-public interface BusinessService<T> {
+public interface BusinessService<E, ID extends Serializable> {
 
-    T save(T t) throws BusinessRuleException;
+    E save(E t) throws BusinessRuleException;
 
-    void delete(String identifier) throws BusinessRuleException;
+    E findOne(ID identifier);
 
-    T findOne(String identifier);
+    Page<E> findAll(Pageable pageable);
+
+    void delete(ID identifier) throws BusinessRuleException;
 }

@@ -47,8 +47,8 @@ public class ProductTest {
     @Test
     public void create() {
         Product product = new Product();
-        product.setIdentifier(UUID.randomUUID().toString());
-        product.setTitle("Inspiron 11");
+        product.setId(UUID.randomUUID().toString());
+        product.setName("Inspiron 11");
         product.setDescription("2 em 1 de 11 polegadas repleto de tecnologia. Moderno, leve e incrivelmente versátil com quatro modos de uso para atender as soluções mais diversas.");
         product.setManufacturer(manufacturer);
         product.setModel("Inspiron 11 3000");

@@ -2,7 +2,7 @@
     <div class="modal-body">
         <div class="panel panel-info">
             <div class="panel-heading">
-                Select a Manufacturer
+                Select a Product Category
             </div>
             <div class="panel-body">
                 <div class="row" ng-if="!vm.showFormNew">
@@ -20,8 +20,8 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <tr ng-repeat="manufacturer in vm.manufacturers" ng-click="vm.select(manufacturer)" role="button">
-                                    <td>{{manufacturer.name}}</td>
+                                <tr ng-repeat="productCategory in vm.productCategories" ng-click="vm.select(productCategory)" role="button">
+                                    <td>{{productCategory.name}}</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -36,26 +36,18 @@
                 </div>
                 <div class="row" ng-if="vm.showFormNew">
                     <div class="col-md-12">
-                        <form name="newManufacturerForm">
-                            <mc-messages></mc-messages>
+                        <mc-messages></mc-messages>
+                        <form name="newProductCategoryFrom">
                             <div class="row">
                                 <div class="col-md-4">
                                     <label>Name</label>
-                                    <input type="text" class="form-control" ng-model="vm.manufacturer.name" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Telephone</label>
-                                    <input type="text" class="form-control" ng-model="vm.manufacturer.telephone" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <label>Address</label>
-                                    <input type="text" class="form-control" ng-model="vm.manufacturer.address" required>
+                                    <input type="text" class="form-control" ng-model="vm.productCategory.name" required>
                                 </div>
                             </div>
                             <div class="row voffset1">
                                 <div class="col-md-12">
                                     <button type="button" class="btn btn-success pull-right" ng-click="vm.saveAndSelect()"
-                                            ng-disabled="newManufacturerForm.$invalid">Create And Select</button>
+                                            ng-disabled="newProductCategoryFrom.$invalid">Create And Select</button>
                                 </div>
                             </div>
                         </form>

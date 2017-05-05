@@ -3,18 +3,18 @@ package io.dynamos.services;
 import io.dynamos.entities.Product;
 import io.dynamos.repositories.ProductRepositoy;
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
-import java.util.UUID;
 
 /**
  * Created by adelmo.pereira on 24/04/2017.
  */
 @Service
-public class ProductService implements BusinessService<Product> {
+public class ProductService implements BusinessService<Product, String> {
 
     @Autowired
     private ProductRepositoy productRepositoy;
@@ -33,21 +33,22 @@ public class ProductService implements BusinessService<Product> {
         return productRepositoy.findOne(identifier);
     }
 
-    private void beforeSave(Product product) throws BusinessRuleException {
-        Product tmp = productRepositoy.findByTitle(product.getTitle());
+    @Override
+    public Page<Product> findAll(Pageable pageable) {
+        return productRepositoy.findAll(pageable);
+    }
 
-        if (Objects.nonNull(tmp) && !tmp.getIdentifier().equals(product.getIdentifier())) {
+    private void beforeSave(Product product) throws BusinessRuleException {
+        Product tmp = productRepositoy.findByName(product.getName());
+
+        if (Objects.nonNull(tmp) && !tmp.getId().equals(product.getId())) {
             throw new BusinessRuleException("A product with this name already exists");
         }
 
-        productRepositoy.findByModel(product.getModel());
+        tmp = productRepositoy.findByModel(product.getModel());
 
-        if (Objects.nonNull(tmp) && (!tmp.getIdentifier().equals(product.getIdentifier()))) {
+        if (Objects.nonNull(tmp) && (!tmp.getId().equals(product.getId()))) {
             throw new BusinessRuleException("A product with this model already exists");
-        }
-
-        if (StringUtils.isEmpty(product.getIdentifier())) {
-            product.setIdentifier(UUID.randomUUID().toString());
         }
     }
 }

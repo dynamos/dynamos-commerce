@@ -2,6 +2,7 @@ package io.dynamos.entities;
 
 import io.dynamos.entities.enums.ProductStatus;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -14,14 +15,15 @@ import java.util.Objects;
 public class Product {
 
     @Id
-    private String identifier;
+    private String id;
 
     @NotNull
-    private String title;
+    private String name;
 
     @NotNull
     private String description;
 
+    @DBRef
     @NotNull
     private Manufacturer manufacturer;
 
@@ -52,12 +54,12 @@ public class Product {
         return status;
     }
 
-    public String getIdentifier() {
-        return identifier;
+    public String getId() {
+        return id;
     }
 
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public List<Attribute> getAttributes() {
@@ -100,12 +102,12 @@ public class Product {
         this.images = images;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {

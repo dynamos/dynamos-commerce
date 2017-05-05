@@ -6,9 +6,9 @@
 
     angular.module('dynamos-panel').controller('CreateProductController', controller);
 
-    controller.$inject = ['Product', '$uibModal'];
+    controller.$inject = ['Product', '$uibModal', '$state'];
 
-    function controller(Product, $uibModal) {
+    function controller(Product, $uibModal, $state) {
         var vm = this;
         vm.product = {};
 
@@ -16,7 +16,8 @@
         vm.selectManufacturer = selectManufacturer;
 
         function save() {
-            Product.save(vm.product);
+            Product.save(vm.product).$promise.then(function(){
+                $state.go('product')});
         }
 
         function selectManufacturer() {

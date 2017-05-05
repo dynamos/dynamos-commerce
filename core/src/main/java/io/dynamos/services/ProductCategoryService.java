@@ -4,13 +4,15 @@ import io.dynamos.entities.ProductCategory;
 import io.dynamos.repositories.ProductCategoryRepository;
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by adelmo.pereira on 05/05/2017.
  */
 @Service
-public class ProductCategoryBusinessService implements BusinessService<ProductCategory> {
+public class ProductCategoryService implements BusinessService<ProductCategory, String> {
 
     @Autowired
     private ProductCategoryRepository productCategoryRepository;
@@ -18,6 +20,11 @@ public class ProductCategoryBusinessService implements BusinessService<ProductCa
     @Override
     public ProductCategory findOne(String identifier) {
         return productCategoryRepository.findOne(identifier);
+    }
+
+    @Override
+    public Page<ProductCategory> findAll(Pageable pageable) {
+        return productCategoryRepository.findAll(pageable);
     }
 
     @Override
@@ -34,11 +41,9 @@ public class ProductCategoryBusinessService implements BusinessService<ProductCa
     }
 
     private void beforeSave(ProductCategory productCategory) throws BusinessRuleException {
-        //TODO
     }
 
     private void beforeDelete(ProductCategory productCategory) throws BusinessRuleException {
-        //TODO
     }
 
 }

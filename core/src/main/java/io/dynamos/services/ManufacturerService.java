@@ -5,13 +5,15 @@ import io.dynamos.repositories.ManufacturerRepository;
 import io.dynamos.repositories.ProductRepositoy;
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 /**
  * Created by adelmo.pereira on 24/04/2017.
  */
 @Service
-public class ManufacturerService implements BusinessService<Manufacturer> {
+public class ManufacturerService implements BusinessService<Manufacturer, String> {
 
     @Autowired
     private ManufacturerRepository manufacturerRepository;
@@ -26,6 +28,11 @@ public class ManufacturerService implements BusinessService<Manufacturer> {
     @Override
     public Manufacturer findOne(String identifier) {
         return manufacturerRepository.findOne(identifier);
+    }
+
+    @Override
+    public Page<Manufacturer> findAll(Pageable pageable) {
+        return manufacturerRepository.findAll(pageable);
     }
 
     @Override
