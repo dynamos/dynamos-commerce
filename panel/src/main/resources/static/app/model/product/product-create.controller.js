@@ -14,10 +14,25 @@
 
         vm.save = save;
         vm.selectManufacturer = selectManufacturer;
+        vm.selectProductCategory = selectProductCategory;
 
         function save() {
-            Product.save(vm.product).$promise.then(function(){
-                $state.go('product')});
+            Product.save(vm.product).$promise.then(function () {
+                $state.go('product')
+            });
+        }
+
+        function selectProductCategory() {
+            $uibModal.open({
+                templateUrl: 'app/model/product-category/product-category-modal.html',
+                controller: 'ProductCategoryModal',
+                controllerAs: 'vm',
+                size: 'lg'
+            }).result.then(success);
+
+            function success(productCategory) {
+                vm.product.productCategory = productCategory;
+            }
         }
 
         function selectManufacturer() {

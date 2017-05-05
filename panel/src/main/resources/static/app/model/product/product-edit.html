@@ -55,9 +55,22 @@
                                 <label class="col-sm-2 control-label">Manufacturer:</label>
                                 <div class="col-sm-8">
                                     <div class="input-group">
-                                        <input type="text" ng-model="vm.product.manufacturer.name" ng-click="vm.selectManufacturer()" disabled  class="form-control">
+                                        <input type="text" ng-model="vm.product.manufacturer.name"  disabled  class="form-control">
                                         <span class="input-group-btn">
-                                          <button class="btn btn-primary" type="button">
+                                          <button class="btn btn-primary" type="button" ng-click="vm.selectManufacturer()">
+                                             Select
+                                          </button>
+                                       </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Product Category:</label>
+                                <div class="col-sm-8">
+                                    <div class="input-group">
+                                        <input type="text" ng-model="vm.product.productCategory.name" disabled  class="form-control">
+                                        <span class="input-group-btn">
+                                          <button class="btn btn-primary" type="button" ng-click="vm.selectProductCategory()">
                                              Select
                                           </button>
                                        </span>

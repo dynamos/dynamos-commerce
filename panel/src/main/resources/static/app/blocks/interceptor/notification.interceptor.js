@@ -28,25 +28,16 @@
             var alertType = response.headers('X-dynamosPanel-alertType');
 
             if (angular.isString(alert) && angular.isString(alertType)) {
-                messageCenterService.add(alertType, alert, {
-                    status: messageCenterService.status.permanent,
-                    timeout: 6000
-                });
+                messageCenterService.add(alertType, alert, {timeout: 6000});
             } else {
                 switch (response.status) {
                     case 0:
-                        messageCenterService.add('danger', 'Server not reachable', {
-                            timeout: 6000
-                        });
+                        messageCenterService.add('danger', 'Server not reachable', {timeout: 6000});
                     case 400:
                         if (response.data !== undefined && response.data.errors !== undefined) {
                             for (var i = 0; i < response.data.errors.length; i++) {
-
                                 var fieldError = response.data.errors[i];
-
-                                messageCenterService.add('danger', fieldError.field + ' ' + fieldError.defaultMessage, {
-                                    timeout: 6000
-                                });
+                                messageCenterService.add('danger', fieldError.field + ' ' + fieldError.defaultMessage, {timeout: 6000});
                             }
                         }
                         break;

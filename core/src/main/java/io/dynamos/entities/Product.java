@@ -23,10 +23,6 @@ public class Product {
     @NotNull
     private String description;
 
-    @DBRef
-    @NotNull
-    private Manufacturer manufacturer;
-
     @NotNull
     private String model;
 
@@ -39,7 +35,12 @@ public class Product {
     @NotNull
     private ProductStatus status;
 
-    private List<ProductCategory> categories;
+    @DBRef
+    @NotNull
+    private Manufacturer manufacturer;
+
+    @DBRef
+    private ProductCategory productCategory;
 
     private List<Attribute> attributes;
 
@@ -130,11 +131,11 @@ public class Product {
         this.status = status;
     }
 
-    public List<ProductCategory> getCategories() {
-        return categories;
+    public ProductCategory getProductCategory() {
+        return productCategory;
     }
 
-    public void setCategories(List<ProductCategory> categories) {
-        this.categories = categories;
+    public void setProductCategory(ProductCategory productCategory) {
+        this.productCategory = productCategory;
     }
 }
