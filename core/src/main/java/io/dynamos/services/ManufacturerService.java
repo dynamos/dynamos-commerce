@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * Created by adelmo.pereira on 24/04/2017.
  */
 @Service
-public class ManufacturerService {
+public class ManufacturerService implements BusinessService<Manufacturer> {
 
     @Autowired
     private ManufacturerRepository manufacturerRepository;
@@ -23,16 +23,19 @@ public class ManufacturerService {
         return manufacturerRepository.save(manufacturer);
     }
 
-    public void delete(String id) throws BusinessRuleException {
-        Manufacturer manufacturer = manufacturerRepository.findOne(id);
-        beforeDelete(manufacturer);
+    @Override
+    public Manufacturer findOne(String identifier) {
+        return manufacturerRepository.findOne(identifier);
+    }
 
-        manufacturerRepository.delete(manufacturer);
+    @Override
+    public void delete(String id) throws BusinessRuleException {
+        beforeDelete(manufacturerRepository.findOne(id));
+        manufacturerRepository.delete(id);
     }
 
     private void beforeDelete(Manufacturer manufacturer) throws BusinessRuleException {
         Integer products = productRepositoy.countByManufacturer(manufacturer.getId());
-
         if (products > 0)
             throw new BusinessRuleException("There are " + products + " products registered with this manufacturer. Cannot delete this");
     }

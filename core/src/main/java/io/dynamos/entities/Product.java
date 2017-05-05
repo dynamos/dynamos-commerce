@@ -37,10 +37,11 @@ public class Product {
     @NotNull
     private ProductStatus status;
 
+    private List<ProductCategory> categories;
+
     private List<Attribute> attributes;
 
     private List<String> images;
-
 
     public ProductStatus getStatus() {
         if (Objects.nonNull(status)) {
@@ -48,7 +49,6 @@ public class Product {
                 return ProductStatus.LOW_QUANTITY;
             }
         }
-
         return status;
     }
 
@@ -124,8 +124,15 @@ public class Product {
         this.model = model;
     }
 
-
     public void setStatus(ProductStatus status) {
         this.status = status;
+    }
+
+    public List<ProductCategory> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<ProductCategory> categories) {
+        this.categories = categories;
     }
 }

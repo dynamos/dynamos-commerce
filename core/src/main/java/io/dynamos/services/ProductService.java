@@ -14,7 +14,7 @@ import java.util.UUID;
  * Created by adelmo.pereira on 24/04/2017.
  */
 @Service
-public class ProductService {
+public class ProductService implements BusinessService<Product> {
 
     @Autowired
     private ProductRepositoy productRepositoy;
@@ -24,14 +24,29 @@ public class ProductService {
         return productRepositoy.save(product);
     }
 
+    @Override
+    public void delete(String identifier) throws BusinessRuleException {
+    }
+
+    @Override
+    public Product findOne(String identifier) {
+        return productRepositoy.findOne(identifier);
+    }
+
     private void beforeSave(Product product) throws BusinessRuleException {
         Product tmp = productRepositoy.findByTitle(product.getTitle());
 
-        if (Objects.nonNull(tmp) && (product.getTitle().equals(tmp.getTitle())) && !tmp.getIdentifier().equals(product.getIdentifier())) {
+        if (Objects.nonNull(tmp) && !tmp.getIdentifier().equals(product.getIdentifier())) {
             throw new BusinessRuleException("A product with this name already exists");
         }
 
-        if(StringUtils.isEmpty(product.getIdentifier())){
+        productRepositoy.findByModel(product.getModel());
+
+        if (Objects.nonNull(tmp) && (!tmp.getIdentifier().equals(product.getIdentifier()))) {
+            throw new BusinessRuleException("A product with this model already exists");
+        }
+
+        if (StringUtils.isEmpty(product.getIdentifier())) {
             product.setIdentifier(UUID.randomUUID().toString());
         }
     }

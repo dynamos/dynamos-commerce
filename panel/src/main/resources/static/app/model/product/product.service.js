@@ -9,6 +9,9 @@
                 'query': {
                     method: 'GET'
                 },
+                'update': {
+                    method: 'PUT'
+                },
                 'get': {
                     method: 'GET',
                     transformResponse: function (data) {

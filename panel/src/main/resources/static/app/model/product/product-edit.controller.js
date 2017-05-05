@@ -11,15 +11,28 @@
     function controller(Product, $stateParams, $state) {
         var vm = this;
         vm.save = save;
+        vm.selectManufacturer = selectManufacturer;
 
-        Product.get({
-            id: $stateParams.id
-        }, function (result) {
-            vm.product = result;
-        });
+        Product.get({id: $stateParams.id}).$promise.then(function (result) {
+                vm.product = result
+            }
+        );
+
+        function selectManufacturer() {
+            $uibModal.open({
+                templateUrl: 'app/model/manufacturer/manufacturer-modal.html',
+                controller: 'ManufacturerModal',
+                controllerAs: 'vm',
+                size: 'lg'
+            }).result.then(success);
+
+            function success(manufacturer) {
+                vm.product.manufacturer = manufacturer;
+            }
+        }
 
         function save() {
-            Product.save(vm.product, function () {
+            Product.update(vm.product).$promise.then(function () {
                 $state.go('product');
             });
         }

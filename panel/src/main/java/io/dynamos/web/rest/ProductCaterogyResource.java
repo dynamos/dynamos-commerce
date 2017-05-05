@@ -1,10 +1,9 @@
 package io.dynamos.web.rest;
 
-import io.dynamos.entities.Manufacturer;
-import io.dynamos.repositories.ManufacturerRepository;
-import io.dynamos.services.ManufacturerService;
+import io.dynamos.entities.ProductCategory;
+import io.dynamos.repositories.ProductCategoryRepository;
+import io.dynamos.services.ProductCategoryBusinessService;
 import io.dynamos.web.rest.util.RestConstants;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
@@ -14,22 +13,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by adelmo.pereira on 24/04/2017.
+ * Created by adelmo.pereira on 05/05/2017.
  */
 @RestController
-@RequestMapping(value = "api/manufacturer")
-public class ManufacturerResource extends RestResource<Manufacturer>{
+@RequestMapping(value = "api/product-category")
+public class ProductCaterogyResource extends RestResource<ProductCategory> {
 
-    @Autowired
-    private ManufacturerRepository manufacturerRepository;
+    private ProductCategoryRepository productCategoryRepository;
 
-    public ManufacturerResource(ManufacturerService businessService) {
+    public ProductCaterogyResource(ProductCategoryBusinessService businessService, ProductCategoryRepository productCategoryRepository) {
         super(businessService);
+        this.productCategoryRepository = productCategoryRepository;
     }
 
     @GetMapping
     public ResponseEntity list(@PageableDefault(sort = {"name"}, value = RestConstants.MAX_PAGE_ITENS) Pageable pageable) {
-        Page page = manufacturerRepository.findAll(pageable);
+        Page page = productCategoryRepository.findAll(pageable);
         return ResponseEntity.ok(page);
     }
 }

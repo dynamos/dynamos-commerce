@@ -12,14 +12,12 @@
         var vm = this;
         vm.save = save;
 
-        Manufacturer.get({
-            id: $stateParams.id
-        }, function (result) {
+        Manufacturer.get({id: $stateParams.id}).$promise.then(function (result) {
             vm.manufacturer = result;
         });
 
         function save() {
-            Manufacturer.save(vm.manufacturer, function(){
+            Manufacturer.save(vm.manufacturer).$promise.then(function () {
                 $state.go('manufacturer');
             });
         }
