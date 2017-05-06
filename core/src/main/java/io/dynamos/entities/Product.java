@@ -3,6 +3,7 @@ package io.dynamos.entities;
 import io.dynamos.entities.enums.ProductStatus;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
@@ -30,6 +31,7 @@ public class Product {
     private BigDecimal price;
 
     @NotNull
+    @Field("quantity_on_stock")
     private Long quantityOnStock;
 
     @NotNull
@@ -40,6 +42,7 @@ public class Product {
     private Manufacturer manufacturer;
 
     @DBRef
+    @Field("product_category")
     private ProductCategory productCategory;
 
     private List<Attribute> attributes;
