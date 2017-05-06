@@ -1,6 +1,8 @@
 package io.dynamos.repositories;
 
 import io.dynamos.entities.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
@@ -12,4 +14,6 @@ public interface ProductRepositoy extends MongoRepository<Product, String> {
     Integer countByManufacturer(String id);
 
     Product findByModel(String model);
+
+    Page<Product> findAllByNameContainingIgnoreCase(Pageable pageable, String name);
 }

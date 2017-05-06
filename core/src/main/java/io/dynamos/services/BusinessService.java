@@ -15,7 +15,7 @@ public interface BusinessService<E, ID extends Serializable> {
 
     E findOne(ID identifier);
 
-    Page<E> findAll(Pageable pageable);
+    Page<E> findAllByName(Pageable pageable, String name);
 
     void delete(ID identifier) throws BusinessRuleException;
 }

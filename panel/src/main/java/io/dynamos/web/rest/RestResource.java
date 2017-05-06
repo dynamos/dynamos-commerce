@@ -46,7 +46,8 @@ public abstract class RestResource<T> {
     }
 
     @GetMapping
-    public ResponseEntity list(@PageableDefault(sort = {"name"}, value = RestConstants.MAX_PAGE_ITENS) Pageable pageable) {
-        return ResponseEntity.ok(businessService.findAll(pageable));
+    public ResponseEntity list(@PageableDefault(sort = {"name"}, value = RestConstants.MAX_PAGE_ITENS) Pageable pageable
+            , @RequestParam(required = false) String name) {
+        return ResponseEntity.ok(businessService.findAllByName(pageable, name));
     }
 }

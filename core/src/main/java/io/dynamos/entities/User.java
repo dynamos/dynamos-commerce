@@ -1,8 +1,10 @@
 package io.dynamos.entities;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 /**
@@ -11,7 +13,7 @@ import java.util.Set;
 public class User {
 
     @Id
-    private String identifier;
+    private String id;
 
     @NotNull
     private String name;
@@ -28,12 +30,15 @@ public class User {
     @NotNull
     private Boolean active;
 
-    public String getIdentifier() {
-        return identifier;
+    @Field("last_login")
+    private LocalDateTime lastLogin;
+
+    public String getId() {
+        return id;
     }
 
-    public void setIdentifier(String identifier) {
-        this.identifier = identifier;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -66,5 +71,21 @@ public class User {
 
     public void setAuthorities(Set<String> authorities) {
         this.authorities = authorities;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
+    }
+
+    public LocalDateTime getLastLogin() {
+        return lastLogin;
+    }
+
+    public void setLastLogin(LocalDateTime lastLogin) {
+        this.lastLogin = lastLogin;
     }
 }

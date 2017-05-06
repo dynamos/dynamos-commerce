@@ -4,6 +4,7 @@ import io.dynamos.entities.Manufacturer;
 import io.dynamos.repositories.ManufacturerRepository;
 import io.dynamos.repositories.ProductRepositoy;
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -31,8 +32,10 @@ public class ManufacturerService implements BusinessService<Manufacturer, String
     }
 
     @Override
-    public Page<Manufacturer> findAll(Pageable pageable) {
-        return manufacturerRepository.findAll(pageable);
+    public Page<Manufacturer> findAllByName(Pageable pageable, String name) {
+        return StringUtils.isEmpty(name) ?
+                manufacturerRepository.findAll(pageable)
+                : manufacturerRepository.findAllByNameContainingIgnoreCase(pageable, name);
     }
 
     @Override

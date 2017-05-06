@@ -29,7 +29,7 @@
                         <tr ng-repeat="productCategory in vm.productCategories">
                             <td>{{productCategory.name}}</td>
                             <td>
-                                <span class="badge badge-success" role="button" ui-sref="product-category.edit({id:productCategory.name})">
+                                <span class="badge badge-success" role="button" ui-sref="product-category.edit({id:productCategory.id})">
                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                 </span>
                                 <span class="badge badge-danger" role="button" ng-click="vm.deleteProductCategory(productCategory)"><i class="fa fa-times" aria-hidden="true"></i></span>

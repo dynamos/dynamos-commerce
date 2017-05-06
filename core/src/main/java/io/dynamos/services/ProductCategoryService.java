@@ -3,6 +3,7 @@ package io.dynamos.services;
 import io.dynamos.entities.ProductCategory;
 import io.dynamos.repositories.ProductCategoryRepository;
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,8 +24,10 @@ public class ProductCategoryService implements BusinessService<ProductCategory, 
     }
 
     @Override
-    public Page<ProductCategory> findAll(Pageable pageable) {
-        return productCategoryRepository.findAll(pageable);
+    public Page<ProductCategory> findAllByName(Pageable pageable, String name) {
+        return StringUtils.isEmpty(name) ?
+                productCategoryRepository.findAll(pageable)
+                : productCategoryRepository.findAllByNameContainingIgnoreCase(pageable, name);
     }
 
     @Override

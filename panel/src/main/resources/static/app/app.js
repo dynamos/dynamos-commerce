@@ -8,4 +8,5 @@ angular.module('dynamos-panel', [
     'ngAnimate',
     'MessageCenterModule',
     'ncy-angular-breadcrumb',
-    'summernote']);
+    'summernote',
+    'ui.utils.masks']);
