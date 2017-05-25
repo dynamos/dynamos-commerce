@@ -6,5 +6,4 @@ package io.dynamos.entities.enums;
 public enum ProductStatus {
 
     ACTIVE, INACTIVE, LOW_QUANTITY
-
 }

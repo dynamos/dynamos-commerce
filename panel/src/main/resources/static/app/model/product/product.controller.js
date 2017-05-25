@@ -12,6 +12,8 @@
         var vm = this;
         vm.loadAll = loadAll;
         vm.showDescription = showDescription;
+        vm.deleteProduct = deleteProduct;
+
         vm.products = [];
         vm.product = {};
         vm.showDesc = [];
@@ -30,7 +32,24 @@
         }
 
         function showDescription(index) {
-            vm.showDesc[index] =  !vm.showDesc[index];
+            vm.showDesc[index] = !vm.showDesc[index];
+        }
+
+        function deleteProduct(product) {
+            openConfirm(product);
+        }
+
+        function openConfirm(product) {
+            swal({
+                title: "Are you sure?",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, disable it!'
+            }).then(function () {
+                Product.delete(product, loadAll);
+            });
         }
 
         loadAll();

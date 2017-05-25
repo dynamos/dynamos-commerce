@@ -51,7 +51,7 @@ public class Product {
 
     public ProductStatus getStatus() {
         if (Objects.nonNull(status)) {
-            if (quantityOnStock <= 10) {
+            if (Objects.nonNull(quantityOnStock) && quantityOnStock <= 10) {
                 return ProductStatus.LOW_QUANTITY;
             }
         }
@@ -141,4 +141,5 @@ public class Product {
     public void setProductCategory(ProductCategory productCategory) {
         this.productCategory = productCategory;
     }
+
 }
