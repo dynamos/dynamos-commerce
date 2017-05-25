@@ -47,13 +47,13 @@
                                     <span class="badge badge-success" role="button" ui-sref="product-edit({id:product.id})">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                     </span>
-                                    <span class="badge badge-danger" role="button">
+                                    <span class="badge badge-danger" role="button" ng-click="vm.deleteProduct(product)">
                                         <i class="fa fa-times" aria-hidden="true"></i>
                                     </span>
                                 </td>
                             </tr>
                             <tr ng-if="vm.showDesc[$index]">
-                                <td colspan="4"  class="row-inner">
+                                <td colspan="4" class="row-inner">
                                     <label>Description </label>
                                     <dynamic dynamic="product.description"></dynamic>
                                 </td>

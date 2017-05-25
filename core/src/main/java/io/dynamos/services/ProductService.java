@@ -1,6 +1,7 @@
 package io.dynamos.services;
 
 import io.dynamos.entities.Product;
+import io.dynamos.entities.enums.ProductStatus;
 import io.dynamos.repositories.ProductRepositoy;
 import io.dynamos.web.rest.util.exceptions.BusinessRuleException;
 import org.apache.commons.lang3.StringUtils;
@@ -27,6 +28,9 @@ public class ProductService implements BusinessService<Product, String> {
 
     @Override
     public void delete(String identifier) throws BusinessRuleException {
+        Product product = productRepositoy.findOne(identifier);
+        product.setStatus(ProductStatus.INACTIVE);
+        productRepositoy.save(product);
     }
 
     @Override

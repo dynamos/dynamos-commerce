@@ -16,11 +16,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class ManufacturerService implements BusinessService<Manufacturer, String> {
 
-    @Autowired
-    private ManufacturerRepository manufacturerRepository;
+    private final ManufacturerRepository manufacturerRepository;
+    private final ProductRepositoy productRepositoy;
 
     @Autowired
-    private ProductRepositoy productRepositoy;
+    public ManufacturerService(ManufacturerRepository manufacturerRepository, ProductRepositoy productRepositoy) {
+        this.manufacturerRepository = manufacturerRepository;
+        this.productRepositoy = productRepositoy;
+    }
 
     public Manufacturer save(Manufacturer manufacturer) {
         return manufacturerRepository.save(manufacturer);

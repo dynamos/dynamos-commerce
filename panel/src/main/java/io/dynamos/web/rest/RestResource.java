@@ -11,12 +11,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.io.Serializable;
 import java.util.Optional;
 
 /**
  * Created by adelmo.pereira on 05/05/2017.
  */
-public abstract class RestResource<T> {
+public abstract class RestResource<T, ID extends Serializable> {
 
     private BusinessService businessService;
 
@@ -35,19 +36,13 @@ public abstract class RestResource<T> {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity delete(@PathVariable String id) throws BusinessRuleException {
+    public ResponseEntity delete(@PathVariable ID id) throws BusinessRuleException {
         businessService.delete(id);
         return ResponseEntity.ok().headers(HeadersUtil.successAlert()).build();
     }
 
     @GetMapping("{id}")
-    public ResponseEntity find(@PathVariable("id") String identifier) {
+    public ResponseEntity<Object> find(@PathVariable("id") ID identifier) {
         return Optional.ofNullable(businessService.findOne(identifier)).map(ResponseEntity::ok).orElse(new ResponseEntity<>(HttpStatus.BAD_REQUEST));
-    }
-
-    @GetMapping
-    public ResponseEntity list(@PageableDefault(sort = {"name"}, value = RestConstants.MAX_PAGE_ITENS) Pageable pageable
-            , @RequestParam(required = false) String name) {
-        return ResponseEntity.ok(businessService.findAllByName(pageable, name));
     }
 }
