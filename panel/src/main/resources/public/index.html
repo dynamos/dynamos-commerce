@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dynamos-panel">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Dynamos | Dashboard</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.css"/>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+
+<div ng-include="'views/navbar.html'"></div>
+
+<div class="app-body">
+    <div ng-include="'views/sidebar.html'"></div>
+
+    <main class="main">
+        <ol class="breadcrumb" breadcrumb>
+            <ncy-breadcrumb></ncy-breadcrumb>
+        </ol>
+        <div class="container-fluid">
+            <mc-messages></mc-messages>
+        </div>
+        <div class="container-fluid" ui-view="content"></div>
+    </main>
+</div>
+
+</body>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+<script src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.22/js/uikit.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.3/summernote.js"></script>
+
+<script src="webjars/angularjs/1.6.2/angular.min.js"></script>
+<script src="webjars/angularjs/1.6.2/angular-resource.min.js"></script>
+<script src="webjars/angularjs/1.6.2/angular-animate.min.js"></script>
+
+<script src="lib/angular-cache-buster.js"></script>
+<script src="lib/angular-ui-router.min.js"></script>
+<script src="lib/ui-bootstrap-tpls.min.js"></script>
+<script src="lib/message-center.js"></script>
+<script src="lib/angular-breadcrumb.min.js"></script>
+<script src="lib/angular-summernote.min.js"></script>
+<script src="lib/angular-input-masks-standalone.min.js"></script>
+
+<script src="app/app.js"></script>
+<script src="app/app.config.js"></script>
+<script src="app/directive/template.directives.js"></script>
+<script src="app/directive/dynamic.directive.js"></script>
+<script src="app/blocks/interceptor/notification.interceptor.js"></script>
+<script src="app/blocks/config/uib-pagination.config.js"></script>
+
+
+<script src="app/model/manufacturer/manufacturer.state.js"></script>
+<script src="app/model/manufacturer/manufacturer.service.js"></script>
+<script src="app/model/manufacturer/manufacturer.controller.js"></script>
+<script src="app/model/manufacturer/manufacturer-create.controller.js"></script>
+<script src="app/model/manufacturer/manufacturer-edit.controller.js"></script>
+<script src="app/model/manufacturer/manufacturer-modal.controller.js"></script>
+
+<script src="app/model/product/product.state.js"></script>
+<script src="app/model/product/product.service.js"></script>
+<script src="app/model/product/product.controller.js"></script>
+<script src="app/model/product/product-create.controller.js"></script>
+<script src="app/model/product/product-edit.controller.js"></script>
+
+<script src="app/model/product-category/product-category.state.js"></script>
+<script src="app/model/product-category/product-category.service.js"></script>
+<script src="app/model/product-category/product-category.controller.js"></script>
+<script src="app/model/product-category/product-category-create.controller.js"></script>
+<script src="app/model/product-category/product-category-edit.controller.js"></script>
+<script src="app/model/product-category/product-category-modal.controller.js"></script>
+
+</html>

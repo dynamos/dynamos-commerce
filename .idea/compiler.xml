@@ -7,13 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="control-panel" />
+        <module name="core" />
         <module name="domain" />
+        <module name="panel" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="control-panel" target="1.8" />
+      <module name="core" target="1.8" />
       <module name="domain" target="1.8" />
       <module name="dynamos-commerce" target="1.5" />
+      <module name="panel" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
